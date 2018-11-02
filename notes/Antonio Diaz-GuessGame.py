@@ -11,5 +11,4 @@ while a != "guess":
         guess = int(input("Enter number from 1 to 10: "))
     else:
         print(" correct you guessed it!")
-        break
-    print
+    break
