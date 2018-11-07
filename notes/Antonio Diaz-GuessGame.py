@@ -1,21 +1,18 @@
 import random
-a = random.randint(1, 10)
-correct_number = random.randint(1, 10)
+correct_number = random.randint(1,10)
 guesses_remaining = 5
-guess = int(input("Enter number from 1 to 10: "))
-while a !="guess":
-    print
+playing = "true"
+while playing == "true":
+    guess = int(input("Guess a number from 1-10........"))
+    guesses_remaining = guesses_remaining - 1
     if guess == correct_number:
-        if guess < a:
-            print("to low")
-        guess = int(input("Enter number from 1 to 10: "))
-
-        guesses_remaining = guesses_remaining - 1
-    elif guess > a:
-        print("to high")
-        guess = int(input("Enter number from 1 to 10: "))
+        print("Correct you guess the number!")
+        playing = "false"
     else:
-        print(" correct you guessed it!")
-        if guesses_remaining == 0:
-            print("Ran out of guesses")
-    keep_playing = "false"
+        if correct_number > guess:
+            print("To low")
+        elif correct_number < guess:
+            print("To high")
+    if guesses_remaining == 0:
+        print("Ran out of guesses. Better luck next time")
+        playing = "false"
