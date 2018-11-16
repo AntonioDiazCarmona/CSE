@@ -13,9 +13,9 @@ while money > 0:
     myrole = (dice1 + dice2)
     if myrole == 7:
         money += 5
-        print("your roll was a 7 you earned four dollars")
+        print("Your roll was a 7 you earned four dollars")
     elif myrole != 0:
-        print("sorry you did not roll a 7,roll again?")
+        print("Did not roll a 7, Roll again?")
     elif money != 0:
-        print("sorry you ran out of money")
-print("sorry you loose. you played %d rounds" % rounds)
+        print("You ran out of money")
+print("Sorry you loose. You played %d rounds" % rounds)
