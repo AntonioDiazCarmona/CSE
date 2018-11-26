@@ -108,3 +108,12 @@ def grade_calc(percentage):
 
 
 print(grade_calc(60))
+# equality statement
+print(5 > 4)
+print(5 >= 3)
+print(3==3)
+print(3 != 4)
+"""
+a = 3 #a is set to 3
+a == 3 # is equal to 3?
+"""
