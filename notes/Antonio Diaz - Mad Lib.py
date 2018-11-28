@@ -19,5 +19,6 @@ print("Before i finished asking my question he look at me and said  %s" % noun5)
 print("He said this to me because he look outside the window and saw  %s" % noun6)
 print("He said to follow him quickly and suddenly he opened a door and behind it was  %s" % noun7)
 print("Because of what was behind the door we went to an underground passage way that lead to  %s" % noun8)
-print("While looking in the underground passage we found a door so we decided to try to open it but suddenly we heard %s" % noun9)
+print("While looking in the underground passage we found a door so we decided to try to open it but suddenly "
+      "we heard %s" % noun9)
 print("when we heard the loud noice i woke up and realized it was all a dream")
