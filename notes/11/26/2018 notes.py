@@ -75,10 +75,10 @@ print(list1)
 
 for character in list1:
     if character == "u":
-        # replace with a *
-    current_index = list1.index(character)
-    list.pop(current_index)
-    list.insert(current_index, "*")
+# replace with a *
+current_index = list1.index(character)
+list.pop(current_index)
+list.insert(current_index, "*")
 
 #Change list into strings
 print("".join(list1))

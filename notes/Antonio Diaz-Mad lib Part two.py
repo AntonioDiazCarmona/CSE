@@ -1,3 +1,19 @@
+word_list = []
+word_list.append(input("Type in a word ending in 'ing'"))
+word_list.append(input("Type in a word ending in 'ing'"))
+word_list.append(input("Type in a place:"))
+word_list.append(input("Type in a place:"))
+word_list.append(input("Type in a popular person: "))
+word_list.append(input("Type in what you would ask your popular person':"))
+word_list.append(input("What would your popular person say to you':"))
+word_list.append(input("He said this to you because:"))
+word_list.append(input("What was behind the door:"))
+word_list.append(input("What did the underground passage way lead to':"))
+word_list.append(input("What did you hear:"))
+
+
+
+
 verb1 = input("Type in a word ending in 'ing': ")
 verb2 = input("Type in a word ending in 'ing': ")
 noun1 = input("Type in a place: ")
