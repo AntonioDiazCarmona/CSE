@@ -1,17 +1,15 @@
-
+i
 import time
 name = raw_input("What is your name? ")
 print
 "Hello, " + name, "Time to play hangman!"
 print
-"
-"
 time.sleep(1)
 print
 "Start guessing..."
 time.sleep(0.5)
-word = "secret"
-guesses = ''
+word = "Something"
+guesses =
 turns = 10
 while turns > 0:
     failed = 0
@@ -19,15 +17,10 @@ while turns > 0:
         if char in guesses:
             print
             char,
-
         else:
             print
             "_",
             failed += 1
-
-            # if failed is equal to zero
-
-    # print You Won
     if failed == 0:
 print"You Won"
 guess = raw_input("guess a character:")
