@@ -19,8 +19,8 @@ while turns > 0:
             "_",
             failed += 1
     if failed == 0:
-print"You Won"
-guess = raw_input("guess a character:")
+print("You Won")
+guess = input("guess a character:")
 guesses += guess
 if guess not in word:
     turns -= 1
@@ -29,4 +29,4 @@ if guess not in word:
 print
 "You have", + turns, 'more guesses'
 if turns == 0:
-    print("You Loose
+    print("You Loose")
