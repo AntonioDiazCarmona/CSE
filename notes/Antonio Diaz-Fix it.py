@@ -5,14 +5,14 @@ height = input()
 print("How much do you weigh?", end=' ')
 weight = input()
 
-print("So, you're %s old, %s tall and %s heavy.") % (age, height, weight)
+print("So, you're %s old, %s tall and %s heavy." % (age, height, weight))
 
 
 print('Let\'s practice everything.')
 print('You\'d need to know \'bout escapes')
-with['\\ that do \n newlines and \t tabs.']:
+print('with\\ that do \n newlines and \t tabs.')
 
-    poem = """
+poem = """
 \tThe lovely world
 with logic so firmly planted
 cannot discern \n the needs of love

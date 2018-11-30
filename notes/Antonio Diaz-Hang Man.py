@@ -1,15 +1,12 @@
-i
+
 import time
-name = raw_input("What is your name? ")
-print
-"Hello, " + name, "Time to play hangman!"
-print
+name = input("What is your name? ")
+print("Hello, " + name, "Time to play hangman!")
 time.sleep(1)
-print
-"Start guessing..."
+print("Start guessing...")
 time.sleep(0.5)
 word = "Something"
-guesses =
+guesses = 10
 turns = 10
 while turns > 0:
     failed = 0
@@ -32,5 +29,4 @@ if guess not in word:
 print
 "You have", + turns, 'more guesses'
 if turns == 0:
-    print
-    "You Loose
+    print("You Loose
