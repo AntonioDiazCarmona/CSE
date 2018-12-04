@@ -1,18 +1,9 @@
-def challengeE1(first,lastname):
-fname = input("Input your First Name : ")
-lname = input("Input your Last Name : ")
-print ("Your name is   " + lname + " " + fname)
-
-
-
-
-
-def challengeE1(first,lastname):
-first_name = input("Bob")
-last_name = input("dole")
-print("your name is " % (last_name, first_name))
-
-# def challenge7(number):
-#     print(number+number+number*number+number**3)
-#
-#     challenge7(2)
+# def challengeE1(firstname,lastname):
+#     print ("Your name is   " + lastname + " " + firstname)
+# challengeE1("John", "Doe")
+def challgengeE2(number):
+    number = int(input("Enter a number: "))
+    if number % 2 == 0:
+        print("Even number")
+    else:
+        print("Odd number")
