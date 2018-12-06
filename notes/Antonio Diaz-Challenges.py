@@ -15,12 +15,20 @@ def challengeE3(base, height):
     area = base * height / 2
     print("area = %d" % area)
 
+challengeE3(4, 6)
 
 def challengeE4(number):
     if number > 0:
         print("Positive number")
     elif number == 0:
         print("Zero")
-    else number < 0:
-print("Negative number")
-challengeE4(56)
+    else:
+        print("Negative number")
+challengeE4(0)
+
+
+
+def challengeE5(radius):
+    area = 3.14*radius*2
+
+challengeE5(20)
