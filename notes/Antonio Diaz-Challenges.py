@@ -28,7 +28,10 @@ challengeE4(0)
 
 
 
-def challengeE5(radius):
-    area = 3.14*radius*2
-
-challengeE5(20)
+def challengeE9(vowel):
+    vowel = ['a', 'e', 'i' , 'o' , 'u']
+def check_wovel(str):
+    if str in vowel:
+        print("Letter is vowel")
+else:
+print ("Letter is consonant")
