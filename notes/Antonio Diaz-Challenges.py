@@ -28,10 +28,11 @@ challengeE4(0)
 
 
 
-def challengeE9(vowel):
-    vowel = ['a', 'e', 'i' , 'o' , 'u']
-def check_wovel(str):
+def challengeE9(str):
+    vowel = ['a', 'e', 'i', 'o', 'u']
     if str in vowel:
         print("Letter is vowel")
-else:
-print ("Letter is consonant")
+    else:
+        print("Letter is consonant")
+
+challengeE9("a")
