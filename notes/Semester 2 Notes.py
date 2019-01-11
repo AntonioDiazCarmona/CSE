@@ -11,10 +11,18 @@ print(age + "? My daughter is older than you")
 
 
 # make a list with atleast 5 colors
-colors =["green","purple","pink","blue","red","orange"]
+colors =["green","purple","pink","blue","red",]
 colors.append("cyan")
 
 print(colors)
 
 colors.pop(1)
 print(colors)
+
+print(len(colors))
+print(colors[1])
+
+
+
+#swap two items def chanfe(first,last):
+#return last +", " + first
