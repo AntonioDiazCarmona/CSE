@@ -6,19 +6,15 @@ letters =["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p""q","r","s"
 letter = input("")
 if letter in the_word:
     print(letter)
-
-for character in list1:
-    if character == "u":
-        # replace with a *
-        currrent_index = list1.index(character)
-        list1.pop(currrent_index)
-        list1.insert(currrent_index, "*")
+output['_','_','_','_','_']
+# # for i in range(for len(the_word))
+# ['m','a','n','g','o']
+#     output=["m"
+#         output['_','_','_','_','_']
 
 
 
-
-
-
+the_word len['_']
 
 
 

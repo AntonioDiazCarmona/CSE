@@ -26,3 +26,11 @@ print(colors[1])
 
 #swap two items def chanfe(first,last):
 #return last +", " + first
+# for i in range(for len(the_word))
+
+
+
+# the alphabet withought actuall list of all the letters
+import string
+print(list(string.ascii_letters))
+print(string.ascii_letters)
