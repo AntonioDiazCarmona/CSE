@@ -5,9 +5,9 @@ print(the_word)
 letters =["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p""q","r","s","t","u","v","w","x","y","z"]
 turns_left = 10
 failed = 0
-
 while turns_left > 0:
     # Create the output
+
 
     # Taking a guess
     letter = input("")

@@ -6,16 +6,16 @@ letters =["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p""q","r","s"
 letter = input("")
 if letter in the_word:
     print(letter)
-output['_','_','_','_','_']
+# output['_','_','_','_','_']
 # # for i in range(for len(the_word))
-# ['m','a','n','g','o']
-#     output=["m"
-#         output['_','_','_','_','_']
-
-
-
-the_word len['_']
-
+# # ['m','a','n','g','o']
+# #     output=["m"
+# #         output['_','_','_','_','_']
+# list.append letters_used
+#
+#
+# # the_word len['_']
+# #
 
 
 
