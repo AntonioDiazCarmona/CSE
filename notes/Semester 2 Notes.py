@@ -24,7 +24,7 @@ print(colors[1])
 
 
 
-#swap two items def chanfe(first,last):
+#swap two items def change(first,last):
 #return last +", " + first
 # for i in range(for len(the_word))
 
@@ -34,3 +34,6 @@ print(colors[1])
 import string
 print(list(string.ascii_letters))
 print(string.ascii_letters)
+
+
+list.append basically  adds something
