@@ -6,6 +6,31 @@ letters =["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p""q","r","s"
 letter = input("")
 if letter in the_word:
     print(letter)
+string1 = the_word
+list1 = list(string1)
+print(list1)
+
+for character in list1:
+    if character == the_word:
+
+        currrent_index = list1.index(character)
+        list1.pop(currrent_index)
+        list1.insert(currrent_index, "_")
+
+
+
+
+the_word=["_"]
+item_to_replace =("_")
+replacement_value =[]
+ indices_to_replace = [i for i,x in enumerate(a) if x==item_to_replace]
+indices_to_replace
+[0, 5, 10]
+for i in indices_to_replace:
+  the_word[i] = replacement_value
+
+
+
 # output['_','_','_','_','_']
 # # for i in range(for len(the_word))
 # # ['m','a','n','g','o']
@@ -16,10 +41,6 @@ if letter in the_word:
 #
 # # the_word len['_']
 # #
-
-
-
-
 
 
 
