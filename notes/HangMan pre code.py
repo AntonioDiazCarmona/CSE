@@ -39,5 +39,5 @@ while turns_left > 0:
     print(letter)
     if turns_left == 0:
         print("You Loose better luck next time")
-    if all letter in (i)the_word
-        print("YOU WON")
+        # if letters_used in the_word:
+        #  print("YOU WON")
