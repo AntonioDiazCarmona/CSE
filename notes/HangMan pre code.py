@@ -1,43 +1,53 @@
-import random
-import string
-words =["tomatoes","foodmax","fortnite","chicken","elephant","noodle","pepperoni","computer","pycharm","triangle",]
-the_word = random.choice(words)
-# print(the_word)
-letters = list(string.ascii_letters)
-turns_left = 10
-failed = 0
-letters_used = []
-hidden_word = []
-list_of_letters_in_word = list(the_word)
-print(list_of_letters_in_word)
 
-for character in list_of_letters_in_word:
-    if character in letters:
-        # replace with a *
-        hidden_word.append("*")
+            import random
 
-while turns_left > 0:
-    # Create the output
-    print("".join(hidden_word))
+        words = ["tomatoes", "foodmax", "fortnite", "chicken", "elephant", "noodle", "pepperoni", "computer",
+                     "pycharm", "triangle", ]
+        the_word = random.choice(words)
+        print(the_word)
+        letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "o", "p""q", "r", "s", "t", "u",
+                       "v", "w", "x", "y", "z"]
+        letter = input("")
+        if letter in the_word:
+                print(letter)
+            string1 = the_word
+        list1 = list(string1)
+            print(list1)
 
-    # Taking a guess
-    letter = input("")
-    letters_used.append(letter)
+            for character in list1:
+                if character == the_word:
+                    currrent_index = list1.index(character)
+                    list1.pop(currrent_index)
+                    list1.insert(currrent_index, "_")
 
-    if letter in the_word:
-        print("I found one!")
-        for i in range(len(the_word)):
-            if the_word[i] == letter:
-                hidden_word.pop(i)
-                hidden_word.insert(i, letter)
+            output = ['_']
+            for i in range(for len(the_word))
+            ['_']
+            output = letters
+            output['_', '_', '_', '_', '_']
+            letters_used.append
 
-    else:
-        turns_left -= 1
-        print("Wrong")
-        print("You have", + turns_left, 'more guesses')
-    print(letters_used)
-    print(letter)
-    if turns_left == 0:
-        print("You Loose better luck next time")
-        # if letters_used in the_word:
-        #  print("YOU WON")
+            # output['_','_','_','_','_']
+            # # for i in range(for len(the_word))
+            # # ['m','a','n','g','o']
+            # #     output=["m"
+            # #         output['_','_','_','_','_']
+            # list.append letters_used
+            #
+            #
+            # # the_word len['_']
+            # #
+
+            string1 = the_word
+            list1 = list(string1)
+            print(list1)
+
+            for character in list1:
+                if character == letters:
+                    # replace with a *
+                    currrent_index = list1.index(character)
+                    list1.pop(currrent_index)
+                    list1.insert(currrent_index, "*")
+
+
+print("you have used these letters", + letters_used)
