@@ -1,7 +1,9 @@
 import random
 import string
-words =["tomatoes","foodmax","fortnite","chicken","elephant","noodle","pepperoni","computer","pycharm","triangle",]
+words =["tomatoes","foodmax","fortnite","chicken","elephant","noodle","pepperoni","computer","pycharm","triangle","phone","spongebob","clifford"
+        "star","book","exit","video","test","math","english","biology","dog","cat","alien","meteor","sentence","tissue","thanos","watermelon"]
 the_word = random.choice(words)
+# the_word = "CAPITAL LETTERS!!!"
 # print(the_word)
 letters = list(string.ascii_letters)
 turns_left = 10
@@ -21,15 +23,15 @@ while turns_left > 0:
     print("".join(hidden_word))
 
     # Taking a guess
-    letter = input("")
+    letter = input("").lower()
     letters_used.append(letter)
 
-    if letter in the_word:
+    if letter in the_word.lower():
         print("I found one!")
         for i in range(len(the_word)):
-            if the_word[i] == letter:
+            if the_word[i].lower() == letter:
                 hidden_word.pop(i)
-                hidden_word.insert(i, letter)
+                hidden_word.insert(i, the_word[i])
 
     else:
         turns_left -= 1
