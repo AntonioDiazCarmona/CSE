@@ -17,6 +17,8 @@ for character in list_of_letters_in_word:
     if character in letters:
         # replace with a *
         hidden_word.append("*")
+    else:
+        hidden_word.append(character)
 
 while turns_left > 0:
     # Create the output
