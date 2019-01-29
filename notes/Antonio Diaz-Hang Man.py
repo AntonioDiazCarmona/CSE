@@ -1,7 +1,7 @@
 import random
 import string
-words =["tomatoes","foodmax","fortnite","chicken","elephant","noodle","pepperoni","computer","pycharm","triangle","phone","spongebob","clifford"
-        "star","book","exit","video","test","math","english","biology","dog","cat","alien","meteor","sentence","tissue","thanos","watermelon"]
+words = ["tomatoes", "superman", "chair", "chicken", "math", "noodle", "pepperoni", "computer", "pycharm", "video", ]
+
 the_word = random.choice(words)
 # the_word = "CAPITAL LETTERS!!!"
 # print(the_word)
@@ -18,7 +18,7 @@ for character in list_of_letters_in_word:
         # replace with a *
         hidden_word.append("*")
     else:
-        hidden_word.append(character)
+        hidden_word.append(character)     # punctuation
 
 while turns_left > 0:
     # Create the output
