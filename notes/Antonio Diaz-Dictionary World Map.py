@@ -1,3 +1,23 @@
+# world_map = {
+#     'R19A': {
+#         'NAME': "Wiebe's Classroom",
+#         'DESCRIPTION': "This is the classroom that you are in right "
+#                        "now. It has two exits to the north side.",
+#         'PATHS': {
+#             'NORTH': "PARKING_LOT"
+#         }
+#     },
+#     'PARKING_LOT': {
+#         'NAME': "The Edison Parking Lot",
+#         'DESCRIPTION': "There are cars parked here. To "
+#                        "the south is Mr. Wiebe's room",
+#         'PATHS': {
+#             'SOUTH': "R19A"
+#         }
+#     }
+# }
+
+
 world_map = {
     'R19A':{
         'NAME': "Abandoned  Mansion",
@@ -6,20 +26,25 @@ world_map = {
                        "The Mansion has been abandoned for centuries and it has stayed stay the same."
                        "The mansion has 9 rooms and 9 door or does it? it also has 9 statues which are flip upside down",
         'PATHS': {
-        "NORTH": "MANSION_DOOR"
+            'SOUTH': "MANSION_DOOR"
         }
     },
     'MANSION_DOOR':{
-        'NAME' : "The ABANDONED MANSION DOOR",
-        'DESCRIPTION':"There are plants here too"
-        "the south is MR.Wiebe's room",
+        'NAME': "The ABANDONED MANSION DOOR",
+        'DESCRIPTION':"There are plants here and "
+        " to the south is a window where you can look through",
         'paths': {
-            'SOUTH': "R19A"
+            'EAST': "Mansion_Window",
+            'WEST': "STATUE"
         }
+    },
+    "STATUE": {
+        'NAME': "Coble stone statue "
+        'DESCRIPTION':
     }
 }
 #other variables
-current_node = world_map['R19A']
+current_node = world_map['MANSION_DOOR']
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 playing = True
 # controller

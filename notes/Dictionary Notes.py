@@ -102,3 +102,7 @@ for state, facts in complex_dictionary.items():
         print("-" * 20)
     print ("-" * 20)
 
+#other notes
+states['AL'] = "Alaska?"    # it isnt alaska
+# changing dictionart value
+states['AL'] = "Alabama" # its actually alabama
