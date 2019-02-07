@@ -20,9 +20,10 @@
     <session id="597598309">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.44" value="2" />
           <entry key="project.open.time.45" value="1" />
@@ -40,7 +41,7 @@
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,32 +56,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="13605" />
+          <entry key="py" value="15034" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="13605" />
+          <entry key="Python" value="15034" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Antonio Diaz-Dictionary World Map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="113" column="14" lean-forward="true" selection-end-line="126" selection-end-column="44" />
+            <state relative-caret-position="392">
+              <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Dictionary Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
+            <state relative-caret-position="509">
+              <caret line="238" column="2" selection-start-line="233" selection-end-line="238" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -104,8 +105,8 @@
         <option value="$PROJECT_DIR$/notes/Basic Python Notes.py" />
         <option value="$PROJECT_DIR$/notes/HangMan pre code.py" />
         <option value="$PROJECT_DIR$/notes/Antonio Diaz-Hang Man.py" />
-        <option value="$PROJECT_DIR$/notes/Antonio Diaz-Dictionary World Map.py" />
         <option value="$PROJECT_DIR$/notes/Dictionary Notes.py" />
+        <option value="$PROJECT_DIR$/notes/Antonio Diaz-Dictionary World Map.py" />
       </list>
     </option>
   </component>
@@ -397,17 +398,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Antonio Diaz-Dictionary World Map.py">
+    <entry file="file://$PROJECT_DIR$/notes/Dictionary Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="113" column="14" lean-forward="true" selection-end-line="126" selection-end-column="44" />
+        <state relative-caret-position="509">
+          <caret line="238" column="2" selection-start-line="233" selection-end-line="238" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Dictionary Notes.py">
+    <entry file="file://$PROJECT_DIR$/notes/Antonio Diaz-Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="134" column="42" selection-start-line="134" selection-start-column="42" selection-end-line="134" selection-end-column="42" />
+        <state relative-caret-position="392">
+          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
         </state>
       </provider>
     </entry>

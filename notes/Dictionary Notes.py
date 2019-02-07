@@ -205,13 +205,11 @@ states['AL'] = "Alabama" # its actually alabama
 #             'EAST':"COBBLE STONE STATUE"
 #         }
 #     },
-#     "COBBLE STONE STATUE": {
-#         'NAME': "WEST COBBLE STONE STATUE",
+#     "": {
+#         'NAME': "",
 #         # where you place the stool to look on top of the statue with no head
-#         'DESCRIPTION': "You are at the cobble stone statue now try to see what is the top of the coblestone statue with no head"
-#                 "by placing the stool in climbing it",
+#         'DESCRIPTION': "",
 #         'PATHS': {
-#             'EAST':
 #         }
 #     }
 # }
@@ -233,3 +231,9 @@ states['AL'] = "Alabama" # its actually alabama
 #              print("I can't go that way.")
 #          else:
 #              print("Command Not Recognized")
+'NAME': "",
+'DESCRIPTION': "",
+'PATHS': {
+    '':
+}
+},
