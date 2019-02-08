@@ -22,17 +22,19 @@ world_map = {
     'ABANDONED_MANSION':{
         'NAME': "Abandoned  Mansion",
         'DESCRIPTION': "What your looking at is an abandoned mansion from the gate door a mile away"
-                       "This mansion who no one know's who built it or who live here and some people have even said that"
-                       "The Mansion has been abandoned for centuries and it has stayed stay the same."
-                       "The mansion has 15 rooms or does it it also has a random statue with not head",
+                       "This mansion who no one know's who built it or who live here and some people have even said "
+                       "that"
+                       "The Mansion has been abandoned for centuries and it has stayed the same."
+                       "The mansion has 15 rooms or does it? It also has a random statue with no head",
         'PATHS': {
             'SOUTH': "MANSION_DOOR"
         }
     },
     'MANSION_DOOR':{
         'NAME': "The ABANDONED MANSION DOOR",
-        'DESCRIPTION':"The door seems to be closed and around are plants and "
-        " to the south is a window where you can look through",
+        'DESCRIPTION': "The door seems to be closed and around you can see plants."
+                       " To the south there is a window ."
+                       "To the west is a statue that has no head.",
         'PATHS': {
             'EAST': "MANSION_WINDOW",
             'WEST': "STATUE"     # NEED TO ADD A NORTH TO GO BACK
@@ -47,7 +49,7 @@ world_map = {
     },
     "EAST SIDE OF MANSION": {
        'NAME': "EAST SIDE OF MANSION",
-        'DESCRIPTION': "The east side of mansion seems to be closed by a giant tree.",
+        'DESCRIPTION': "The east side of the mansion seems to be blocked off by a giant tree.",
         'PATHS': {
             'WEST':"V2MANSION WINDOW"
         }
@@ -134,7 +136,7 @@ world_map = {
         'DESCRIPTION': "Their seems to be alot of rooms here.Their are two stair leading up to the second floor which"
                        "where you can see more rooms.Their is also a random doll sitting on the stairs",
         'PATHS': {
-            '':
+            '':""
         }
     }
 }
@@ -151,6 +153,7 @@ directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 playing = True
 # controller
 while playing:
+    print(current_node['NAME'])
     command = input(">_")
     if command.lower() in ('q', 'quit', 'exit'):
         playing = False
@@ -160,5 +163,5 @@ while playing:
             current_node = world_map[room_name]
          except KeyError:
              print("I can't go that way.")
-         else:
-             print("Command Not Recognized")
+    else:
+         print("Command Not Recognized")
