@@ -106,6 +106,7 @@ for state, facts in complex_dictionary.items():
 states['AL'] = "Alaska?"    # it isnt alaska
 # changing dictionart value
 states['AL'] = "Alabama" # its actually alabama
+
 ## world_map = {
 #     'R19A': {
 #         'NAME': "Wiebe's Classroom",
@@ -230,10 +231,18 @@ states['AL'] = "Alabama" # its actually alabama
 #          except KeyError:
 #              print("I can't go that way.")
 #          else:
-#              print("Command Not Recognized")
-'NAME': "",
-'DESCRIPTION': "",
-'PATHS': {
-    '':
-}
-},
+#
+#
+#
+#
+#
+#           print("Command Not Recognized")
+
+
+#
+# 'NAME': "",
+# 'DESCRIPTION': "",
+# 'PATHS': {
+#     '':
+# }
+# },
