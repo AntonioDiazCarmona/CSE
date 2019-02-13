@@ -1,5 +1,3 @@
-import Special_Random
-
 class WaterGun(object):
     def __init__(self,capacity,distance=30,stock=False):
         #these are things that a WaterGun has.
@@ -37,6 +35,3 @@ yahir_Water_gun = WaterGun(0.1)
 My_water_gun.shoot(5)
 My_water_gun.pump_it_up()
 your_water_gun.shoot(1)
-
-
-print(Special_Random.RandomWiebe.special_random())
