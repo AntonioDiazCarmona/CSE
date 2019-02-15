@@ -12,7 +12,7 @@
     <SUITE FILE_PATH="coverage/CSE$Semester_2_Notes.coverage" NAME="Semester 2 Notes Coverage Results" MODIFIED="1547569926954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_Dictionary_World_Map.coverage" NAME="Antonio Diaz-Dictionary World Map Coverage Results" MODIFIED="1549647677909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$HangMan_pre_code.coverage" NAME="HangMan pre code Coverage Results" MODIFIED="1548345766950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Object.coverage" NAME="Object Coverage Results" MODIFIED="1550161831445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Object.coverage" NAME="Object Coverage Results" MODIFIED="1550248812242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_Hang_Man.coverage" NAME="Antonio Diaz-Hang Man Coverage Results" MODIFIED="1548692883970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Object_Notes.coverage" NAME="Object Notes Coverage Results" MODIFIED="1550075712096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Basic_Python_Notes.coverage" NAME="Basic Python Notes Coverage Results" MODIFIED="1547832059362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
@@ -22,7 +22,7 @@
     <session id="597598309">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.38" value="1" />
@@ -40,36 +40,36 @@
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.65" value="1" />
-          <entry key="project.open.time.72" value="3" />
+          <entry key="project.open.time.72" value="4" />
           <entry key="project.open.time.73" value="1" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.77" value="1" />
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="21" />
+          <entry key="py" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="21" />
+          <entry key="Python" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="7" />
-          <entry key="py" value="17216" />
+          <entry key="py" value="17790" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="17216" />
+          <entry key="Python" value="17790" />
         </counts>
       </usages-collector>
     </session>
@@ -79,8 +79,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Dictionary Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
+            <state relative-caret-position="329">
               <caret line="108" selection-start-line="108" selection-end-line="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notes/Special_Random.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <marker date="1550075549302" expanded="true" signature="53:58" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Object Notes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+            <state relative-caret-position="238">
+              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
               <folding>
                 <marker date="1550075694775" expanded="true" signature="918:919" ph="..." />
                 <marker date="1550075694775" expanded="true" signature="918:923" ph="..." />
@@ -98,23 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/Special_Random.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-              <folding>
-                <marker date="1550075549302" expanded="true" signature="53:58" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Object.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="238">
+              <caret line="14" column="63" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -165,7 +165,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/notes/Object Notes.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -443,15 +443,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Dictionary Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
+        <state relative-caret-position="329">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Special_Random.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <marker date="1550075549302" expanded="true" signature="53:58" ph="..." />
           </folding>
@@ -460,8 +460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Object Notes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+        <state relative-caret-position="238">
+          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding>
             <marker date="1550075694775" expanded="true" signature="918:919" ph="..." />
             <marker date="1550075694775" expanded="true" signature="918:923" ph="..." />
@@ -471,8 +471,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="238">
+          <caret line="14" column="63" lean-forward="true" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
         </state>
       </provider>
     </entry>
