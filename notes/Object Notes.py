@@ -1,5 +1,3 @@
-import Special_Random
-
 class WaterGun(object):
     def __init__(self,capacity,distance=30,stock=False):
         #these are things that a WaterGun has.
