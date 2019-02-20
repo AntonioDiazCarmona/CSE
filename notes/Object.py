@@ -33,4 +33,4 @@ My_Faucet = Faucet(2,0,50,)
 
 
 #Do stuff with the obeject
-My_Faucet =turn_on
+My_Faucet = turn_on
