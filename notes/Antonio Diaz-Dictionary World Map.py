@@ -41,13 +41,13 @@ world_map = {
         }
     },
     'MANSION_WINDOW': {
-        'NAME': "EAST SIDE WINDOW",
+        'NAME': "EAST_SIDE_WINDOW",
         'DESCRIPTION': "The window seems to be a mirror ",
         'PATHS': {
             'WEST': "EAST SIDE OF MANSION"                                        # YOU CAN KEEP GOING HERE
         }
     },
-    "EAST SIDE OF MANSION": {
+    "EAST_SIDE_OF_MANSION": {
        'NAME': "EAST SIDE OF MANSION",
         'DESCRIPTION': "The east side of the mansion seems to be blocked off by a giant tree.",
         'PATHS': {
