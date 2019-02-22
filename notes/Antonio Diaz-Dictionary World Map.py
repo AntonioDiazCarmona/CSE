@@ -117,7 +117,8 @@ world_map = {
         'NAME': "WEST COBBLE STONE STATUE",
         # where you place the stool to look on top of the statue with no head
         'DESCRIPTION': "You are at the cobble stone statue now try to see what is the top of the coblestone statue with no head"
-                "by placing the stool in climbing it",    # this is where you would check and their is going to be a key to the mansion
+                "by placing the stool that you collected from the backyard and try climbing it to see what was"
+                       " at the top of the no head statue",    # this is where you would check and their is going to be a key to the mansion
         'PATHS': {
             'EAST':"V2MANSION_DOOR"
         }
@@ -125,16 +126,16 @@ world_map = {
 
     "V2MANSION_DOOR":{
         'NAME': "FRONT MANSION DOOR",
-        'DESCRIPTION': "Your are back againg to front mansion now try to open with the key you got from the "
-                       "top of the cobbles stone statue with not head",
+        'DESCRIPTION': "Your are back again to front mansion now try to open with the key you got from the "
+                       "top of the cobbles stone statue with not head",         # here is where you would open the mansion door
         'PATHS': {
             'SOUTH':"INSIDE_MANSION"
         }
     },
-    "INSIDE MANSION": {
+    "INSIDE_MANSION": {
         'NAME': "INSIDE OF MANSION",
         'DESCRIPTION': "Their seems to be alot of rooms here.Their are two stair leading up to the second floor which"
-                       "where you can see more rooms.Their is also a random doll sitting on the stairs",
+                       "where you can see more rooms.Their is also a random doll sitting on the stairs",         # you opened the mansion door  so you got inside the mansion
         'PATHS': {
             '':""
         }
