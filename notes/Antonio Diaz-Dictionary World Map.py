@@ -54,7 +54,7 @@ world_map = {
             'WEST':"V2MANSION WINDOW"
         }
     },
-    "V2MANSION WINDOW":{
+    "V2MANSION_WINDOW":{
         'NAME': "WEST SIDE WINDOW OF MANSION",
             'DESCRIPTION': " You are back to the window that seems to be a mirror",
             'PATHS': {
@@ -70,21 +70,21 @@ world_map = {
             'SOUTH': "V1_SIDE OF MANSION"
         }
     },
-    "V1_SIDE OF MANSION": {
+    "V1_SIDE_OF_MANSION": {
             'NAME': "South side of mansion",
         "DESCRIPTION": "You are looking at the south side of mansion which leads to the backyard",
         'PATHS':{
             'SOUTH':"you are going down the side of mansion",
         }
     },
-    "DOWN SIDE OF MANSION": {
+    "DOWN_SIDE_OF_MANSION": {
             'NAME': "Down south side of mansion",
         "DESCRIPTION": "You are walking down the south side of mansion",
         'PATHS':{
                 'EAST':"You are at the backyard"
         }
     },
-    "BACKYARD OF MANSION": {
+    "BACKYARD_OF_MANSION": {
             'NAME': "EAST BACKYARD",
         "DESCRIPTION": "You are at the back yard and their seems to be alot of items at the back like stools,slide,"
                        "and a small little tree",
@@ -92,28 +92,28 @@ world_map = {
             'WEST':"Side of Mansion"
         }
     },
-    "V2_SIDE OF MANSION": {
+    "V2_SIDE_OF_MANSION": {
             'NAME':" WEST SIDE OF MANSION",
         "DESCRIPTION":" You are looking at the side of the mansion you came from",
         'PATHS':{
             'NORTH': "UP SIDE OF MANSION"
         }
     },
-    "UP SIDE OF MANSION": {
+    "UP_SIDE_OF_MANSION": {
         'NAME': "UP NORTH,WEST SIDE OF MANSION",
         'DESCRIPTION': "This is the way you came from in the begining to go to the back yard",
         'PATHS': {
             'EAST':"SIDE OF MANSION"
         }
     },
-    "V3_SIDE OF MANSION": {
+    "V3_SIDE_OF_MANSION": {
         'NAME': "WEST SIDE OF MANSION",     # CONFUSED
         'DESCRIPTION': "You are at the west side of mansion to the east you can see the coble stone statue from before",
         'PATHS': {
             'EAST':"COBBLE STONE STATUE"
         }
     },
-    "COBBLE STONE STATUE": {
+    "COBBLE_STONE_STATUE": {
         'NAME': "WEST COBBLE STONE STATUE",
         # where you place the stool to look on top of the statue with no head
         'DESCRIPTION': "You are at the cobble stone statue now try to see what is the top of the coblestone statue with no head"
