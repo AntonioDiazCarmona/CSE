@@ -44,21 +44,21 @@ world_map = {
         'NAME': "EAST_SIDE_WINDOW",
         'DESCRIPTION': "The window seems to be a mirror ",
         'PATHS': {
-            'WEST': "EAST SIDE OF MANSION"                                        # YOU CAN KEEP GOING HERE
+            'EAST': "EAST_SIDE_OF_MANSION"                                        # YOU CAN KEEP GOING HERE
         }
     },
     "EAST_SIDE_OF_MANSION": {
        'NAME': "EAST SIDE OF MANSION",
         'DESCRIPTION': "The east side of the mansion seems to be blocked off by a giant tree.",
         'PATHS': {
-            'WEST':"V2MANSION WINDOW"
+            'WEST':"V2MANSION_WINDOW"
         }
     },
     "V2MANSION_WINDOW":{
         'NAME': "WEST SIDE WINDOW OF MANSION",
             'DESCRIPTION': " You are back to the window that seems to be a mirror",
             'PATHS': {
-                'WEST':"MANSION DOOR"                     # I THINK IM FINISHED WITH THE EAST PATHWAY
+                'WEST':"MANSION_DOOR"                     # I THINK IM FINISHED WITH THE EAST PATHWAY
         }
     },
     "STATUE": {
@@ -67,21 +67,21 @@ world_map = {
                       "You can see a metal piece on top of the statue with there is no head"
                       "the statue is to high you will need something to climb on the statue and get the metal piece",
         'PATHS':{
-            'SOUTH': "V1_SIDE OF MANSION"
+            'SOUTH': "V1_SIDE_OF_MANSION"
         }
     },
     "V1_SIDE_OF_MANSION": {
             'NAME': "South side of mansion",
         "DESCRIPTION": "You are looking at the south side of mansion which leads to the backyard",
         'PATHS':{
-            'SOUTH':"you are going down the side of mansion",
+            'SOUTH':"DOWN_SIDE_OF_MANSION",
         }
     },
     "DOWN_SIDE_OF_MANSION": {
             'NAME': "Down south side of mansion",
         "DESCRIPTION": "You are walking down the south side of mansion",
         'PATHS':{
-                'EAST':"You are at the backyard"
+                'EAST':"BACKYARD_OF_MANSION"
         }
     },
     "BACKYARD_OF_MANSION": {
@@ -89,28 +89,28 @@ world_map = {
         "DESCRIPTION": "You are at the back yard and their seems to be alot of items at the back like stools,slide,"
                        "and a small little tree",
         'PATHS':{      # HERE WE HAVE TO PUT WHERE WE PICK UP ITEMS
-            'WEST':"Side of Mansion"
+            'WEST':"V2_SIDE_OF_MANSION"
         }
     },
     "V2_SIDE_OF_MANSION": {
             'NAME':" WEST SIDE OF MANSION",
         "DESCRIPTION":" You are looking at the side of the mansion you came from",
         'PATHS':{
-            'NORTH': "UP SIDE OF MANSION"
+            'NORTH': "UP_SIDE_OF_MANSION"
         }
     },
     "UP_SIDE_OF_MANSION": {
         'NAME': "UP NORTH,WEST SIDE OF MANSION",
         'DESCRIPTION': "This is the way you came from in the begining to go to the back yard",
         'PATHS': {
-            'EAST':"SIDE OF MANSION"
+            'EAST':"V3_SIDE_OF_MANSION"
         }
     },
     "V3_SIDE_OF_MANSION": {
         'NAME': "WEST SIDE OF MANSION",     # CONFUSED
         'DESCRIPTION': "You are at the west side of mansion to the east you can see the coble stone statue from before",
         'PATHS': {
-            'EAST':"COBBLE STONE STATUE"
+            'EAST':"COBBLE_STONE_STATUE"
         }
     },
     "COBBLE_STONE_STATUE": {

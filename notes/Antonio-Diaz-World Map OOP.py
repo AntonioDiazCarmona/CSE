@@ -10,20 +10,19 @@ class Room(object):
         self.down = down
 
 
-
-
-ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from the gate door a mile away"
+ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from the gate door a mile "
+                                              "away"
                                               "This mansion who no one know's who built it or who live here and some"
                                               " people have even said that the mansion has been abandoned for centuries"
                                               " and it has stayed the same. THe mansion has 15 rooms or does it?"
                                               " It also has a random statue with no head")
 
 MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed and around you can see plants."
-                                                " To the south there is a window.To the west is a statue that"
-                                                " has no head.The door seems to be closed and around you can see"
-                                                " plants.")
+                                                  " To the south there is a window. To the west is a statue that"
+                                                  " has no head.The door seems to be closed and around you can see"
+                                                  " plants.")
 
-MANSION_WINDOW = Room("EAST SIDE WINDOW","The window seems to be a mirror ", None, None, None, "EAST_SIDE_OF_MANSION")
+MANSION_WINDOW = Room("EAST SIDE WINDOW","The window seems to be a mirror ")
 
 EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION","The east side of the mansion seems to be blocked off by a giant"
                                                      " tree.")
@@ -43,36 +42,47 @@ BACKYARD_OF_MANSION = Room("EAST BACKYARD","You are at the back yard and their s
 
 V2_SIDE_OF_MANSION = Room("WEST SIDE OF MANSION","You are looking at the side of the mansion you came from")
 
-uP_SIDE_OF_MANSION = Room("UP NORTH,WEST SIDE OF MANSION","This is the way you came from in the begining to"
+UP_SIDE_OF_MANSION = Room("UP NORTH,WEST SIDE OF MANSION","This is the way you came from in the begining to"
                                                           " go to the back yard")
 
 V3_SIDE_OF_MANSION = Room("West side of mansion","You are at the west side of mansion to the east you"
                                                  " can see the coble stone statue from before")
 
-COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE","You are at the cobble stone statue now try to see what"
-                                                      " is the top of the coblestone statue with no head"
-                                                      "by placing the stool that you collected from the"   # here is where you would find the key...
-                                                      " backyard and try climbing it to see what was"
-                                                      " at the top of the no head statue")
+COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE", "You are at the cobble stone statue now try to see what"
+                                                       " is the top of the cobblestone statue with no head"
+                                                       "by placing the stool that you collected from the"   # you find the key...
+                                                       " backyard and try climbing it to see what was"
+                                                       " at the top of the no head statue")
 
-V2MANSION_DOOR = Room("FRONT MANSION DOOR","Your are back again to front mansion now try to open with"
-                                           " the key you got from the "             
-                                           "top of the cobbles stone statue with not head")      # here is where you get the key and try opening the mansion
+V2MANSION_DOOR = Room("FRONT MANSION DOOR", "Your are back again to front mansion now try to open with"
+                                            " the key you got from the "             
+                                            "top of the cobbles stone statue with not head")  # you get the key
 
-INSIDE_MANSION = Room("INSIDE OF MANSION","Their seems to be alot of rooms here.Their are two stair leading up to "
-                                   "the second floor which"                 # here is where  you open the door with the key and got in the mansion
-                                   "where you can see more rooms.Their is also a random doll sitting on the stairs")
+INSIDE_MANSION = Room("INSIDE OF MANSION", "Their seems to be a lot of rooms here.Their are two stair leading up to "
+                                           "the second floor which where you can see more rooms.Their is also a"
+                                           " random doll sitting on the stairs")  # you open the door with the key,get in
 
-
-
-
-
-#option 1
-# add the dependent rooms after
-R19A = Room("R19A")
-parking_lot = Room('The parking lot',None,R19A)
-R19A.north = parking_lot
-#option 2
-#put them in quotes
-R19A = Room("R19A", 'Parking_lot')
-parking_lot = Room ("The parking lot",None,R19A)
+ABANDONED_MANSION.south = MANSION_DOOR
+MANSION_DOOR.east = MANSION_WINDOW
+MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
+EAST_SIDE_OF_MANSION.west = V2MANSION_WINDOW
+V2MANSION_WINDOW.west = MANSION_DOOR
+MANSION_DOOR.West = STATUE               # here where you keep going
+STATUE.south = V1_SIDE_OF_MANSION
+V1_SIDE_OF_MANSION.south = DOWN_SIDE_OF_MANSION
+DOWN_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
+BACKYARD_OF_MANSION.west = V2_SIDE_OF_MANSION
+V2_SIDE_OF_MANSION.north = UP_SIDE_OF_MANSION
+UP_SIDE_OF_MANSION.east = V3_SIDE_OF_MANSION
+V3_SIDE_OF_MANSION.east = COBBLE_STONE_STATUE
+COBBLE_STONE_STATUE.east = V2MANSION_DOOR
+V2MANSION_DOOR.south = INSIDE_MANSION
+# #option 1
+# # add the dependent rooms after
+# R19A = Room("R19A")
+# parking_lot = Room('The parking lot',None,R19A)
+# R19A.north = parking_lot
+# #option 2
+# #put them in quotes
+# R19A = Room("R19A", 'Parking_lot')
+# parking_lot = Room ("The parking lot",None,R19A)
