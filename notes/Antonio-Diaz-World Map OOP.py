@@ -25,6 +25,16 @@ class Player(object):
         self.current_location = new_location
 
 
+class Mansion_defender(object):
+    def __init__(self, defender_location ):
+        self.health = 50
+        self.current_location = defender_location
+        self.weapon_damage = 10
+
+    def Where_Mansion_defender_is(self, defender_location):
+        self.defender_location = INSIDE_MANSION
+
+
 
 
 
@@ -48,12 +58,13 @@ EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansio
                                                      "tree.")
 V2MANSION_WINDOW = Room("WEST SIDE WINDOW OF MANSION", "You are back to the window that seems to be a mirror")
 
-STATUE = Room("Cobblestone statue", "What your looking at is a coble stone statue of a man with no head "
-                      "You can see a metal piece on top of the statue with there is no head"
-                      "the statue is to high you will need something to climb on the statue and get the metal piece")
+STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head "
+                                    "You can see a metal piece on top of the statue with there is no head"
+                                    "the statue is to high you will need something to climb on the statue and"
+                                    "get the metal piece,to the south is the west side of the mansion.")
 
 V1_SIDE_OF_MANSION = Room("south side of mansion", "You are looking at the south side of mansion which leads"
-                                                  "to the backyard")
+                                                   " to the backyard")
 
 DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You are walking down the south side of mansion")
 
@@ -88,7 +99,8 @@ MANSION_DOOR.east = MANSION_WINDOW
 MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
 EAST_SIDE_OF_MANSION.west = V2MANSION_WINDOW
 V2MANSION_WINDOW.west = MANSION_DOOR
-MANSION_DOOR.West = STATUE               # here where you keep going
+MANSION_DOOR.west = STATUE               # here where you keep going
+STATUE.east = MANSION_DOOR
 STATUE.south = V1_SIDE_OF_MANSION
 V1_SIDE_OF_MANSION.south = DOWN_SIDE_OF_MANSION
 DOWN_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
@@ -121,8 +133,12 @@ while playing:
         try:
             #command ='north'       #if their is now location you put none                           # so this basically tell it if i has a path to north
             room_object_that_we_move_to = getattr(player.current_location,command)
+            if room_object_that_we_move_to is None:
+                raise AttributeError
             player.move(room_object_that_we_move_to)
         except KeyError:
+            print("this key does not exist")
+        except AttributeError:
             print("I can't go that way.")
     else:
         print("Command Not Recognized")
