@@ -1,5 +1,5 @@
 class Hoverboard():
-    def __init__(self,turn_on='False', top_speed=25, forward_speed=10, backwards_speed=5, right_speed=5, left_speed=5,
+    def __init__(self, turn_on='False', top_speed=25, forward_speed=10, backwards_speed=5, right_speed=5, left_speed=5,
                  color='white'):
         # these are the things that hoverboard has
         self.forward = forward_speed
