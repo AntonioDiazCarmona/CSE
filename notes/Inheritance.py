@@ -45,13 +45,12 @@ class KeyLessCar(Car):
     def start_engine(self):
         self.engine_status = True
         print("you push the button and the car starts")
-
-julianna_car = Corvette()          # this is an instance
+# this is an instance
+julianna_car = Corvette()
 julianna_car.start_engine()
 julianna_car.move_forward()
-
-
-adam_car = KeyLessCar("Adam's ride", "Diesiel", "Toaster") # this is an instance
+# this is an instance
+adam_car = KeyLessCar("Adam's ride", "Diesiel", "Toaster")
 adam_car.start_engine()
 adam_car.move_forward()
 adam_car.turn_off()

@@ -55,7 +55,7 @@ MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed a
 MANSION_WINDOW = Room("EAST SIDE WINDOW", "The window seems to be a mirror ")
 
 EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansion seems to be blocked off by a giant"
-                                                     "tree.")
+                                                    "tree.")
 V2MANSION_WINDOW = Room("WEST SIDE WINDOW OF MANSION", "You are back to the window that seems to be a mirror")
 
 STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head "
@@ -69,21 +69,23 @@ V1_SIDE_OF_MANSION = Room("south side of mansion", "You are looking at the south
 DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You are walking down the south side of mansion")
 
 BACKYARD_OF_MANSION = Room("EAST BACKYARD", "You are at the back yard and their seems to be alot of items at"
-                                           " the backyard like stools,slide,and a small little tree")     # here you would get a stool
+                                            " the backyard like stools,slide,and a small little tree")
+# here you would get a stool
 
-V2_SIDE_OF_MANSION = Room("WEST SIDE OF MANSION","You are looking at the side of the mansion you came from")
+V2_SIDE_OF_MANSION = Room("WEST SIDE OF MANSION", "You are looking at the side of the mansion you came from")
 
-UP_SIDE_OF_MANSION = Room("UP NORTH,WEST SIDE OF MANSION","This is the way you came from in the begining to"
-                                                          " go to the back yard")
+UP_SIDE_OF_MANSION = Room("UP NORTH,WEST SIDE OF MANSION", "This is the way you came from in the begining to"
+                                                           " go to the back yard")
 
-V3_SIDE_OF_MANSION = Room("West side of mansion","You are at the west side of mansion to the east you"
-                                                 " can see the coble stone statue from before")
+V3_SIDE_OF_MANSION = Room("West side of mansion", "You are at the west side of mansion to the east you"
+                                                  " can see the coble stone statue from before")
 
 COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE", "You are at the cobble stone statue now try to see what"
                                                        " is the top of the cobblestone statue with no head"
-                                                       "by placing the stool that you collected from the"# you find the key...
+                                                       "by placing the stool that you collected from the"
                                                        " backyard and try climbing it to see what was"
                                                        " at the top of the no head statue")
+# you find the key...
 
 V2MANSION_DOOR = Room("FRONT MANSION DOOR", "Your are back again to front mansion now try to open with"
                                             " the key you got from the "             
@@ -95,8 +97,11 @@ INSIDE_MANSION = Room("INSIDE OF MANSION", "Their seems to be a lot of rooms her
 # you open the door with the key,get in.
 
 ABANDONED_MANSION.south = MANSION_DOOR
+MANSION_DOOR.north = ABANDONED_MANSION
 MANSION_DOOR.east = MANSION_WINDOW
+MANSION_WINDOW.west = MANSION_DOOR      # here up is mostly done just need something else
 MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
+EAST_SIDE_OF_MANSION.west = MANSION_DOOR
 EAST_SIDE_OF_MANSION.west = V2MANSION_WINDOW
 V2MANSION_WINDOW.west = MANSION_DOOR
 MANSION_DOOR.west = STATUE               # here where you keep going
@@ -106,7 +111,7 @@ V1_SIDE_OF_MANSION.south = DOWN_SIDE_OF_MANSION
 DOWN_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
 BACKYARD_OF_MANSION.west = V2_SIDE_OF_MANSION
 V2_SIDE_OF_MANSION.north = UP_SIDE_OF_MANSION
-UP_SIDE_OF_MANSION.east = V3_SIDE_OF_MANSION
+UP_SIDE_OF_MANSION.east = V3_SIDE_OF_MANSION     # here need to fix because direction is wrong
 V3_SIDE_OF_MANSION.east = COBBLE_STONE_STATUE
 COBBLE_STONE_STATUE.east = V2MANSION_DOOR
 V2MANSION_DOOR.south = INSIDE_MANSION
@@ -131,8 +136,8 @@ while playing:
         playing = False
     elif command.lower() in directions:
         try:
-            #command ='north'       #if their is now location you put none                           # so this basically tell it if i has a path to north
-            room_object_that_we_move_to = getattr(player.current_location,command)
+            # command ='north'#if their is now location you put none# so this basically tell it if i has a path to north
+            room_object_that_we_move_to = getattr(player.current_location, command)
             if room_object_that_we_move_to is None:
                 raise AttributeError
             player.move(room_object_that_we_move_to)
