@@ -33,12 +33,6 @@ class Mansion_defender(object):
 
     def Where_Mansion_defender_is(self, defender_location):
         self.defender_location = INSIDE_MANSION
-
-
-
-
-
-
 ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from the gate door a mile "
                                               "away"
                                               "This mansion who no one know's who built it or who live here and some"
@@ -46,12 +40,10 @@ ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abando
                                               " and it has stayed the same. THe mansion has 15 rooms or does it?"
                                               " It also has a random statue with no head")
 player = Player(ABANDONED_MANSION)
-
 MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed and around you can see plants."
                                                   " To the south there is a window. To the west is a statue that"
                                                   " has no head.The door seems to be closed and around you can see"
                                                   " plants.")
-
 MANSION_WINDOW = Room("EAST SIDE WINDOW", "The window seems to be a mirror ")
 
 EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansion seems to be blocked off by a giant"
@@ -99,22 +91,35 @@ INSIDE_MANSION = Room("INSIDE OF MANSION", "Their seems to be a lot of rooms her
 ABANDONED_MANSION.south = MANSION_DOOR
 MANSION_DOOR.north = ABANDONED_MANSION
 MANSION_DOOR.east = MANSION_WINDOW
-MANSION_WINDOW.west = MANSION_DOOR      # here up is mostly done just need something else
+MANSION_WINDOW.west = MANSION_DOOR  # here up is mostly done just need something else
+MANSION_DOOR.east = MANSION_WINDOW
 MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
 EAST_SIDE_OF_MANSION.west = MANSION_DOOR
+MANSION_DOOR.east = EAST_SIDE_OF_MANSION
 EAST_SIDE_OF_MANSION.west = V2MANSION_WINDOW
+V2MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
 V2MANSION_WINDOW.west = MANSION_DOOR
-MANSION_DOOR.west = STATUE               # here where you keep going
+MANSION_DOOR.east = V2MANSION_WINDOW
+MANSION_DOOR.west = STATUE  # here where you keep going
 STATUE.east = MANSION_DOOR
 STATUE.south = V1_SIDE_OF_MANSION
+V1_SIDE_OF_MANSION.north = STATUE
 V1_SIDE_OF_MANSION.south = DOWN_SIDE_OF_MANSION
+DOWN_SIDE_OF_MANSION.north = V1_SIDE_OF_MANSION  # 5
 DOWN_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
+BACKYARD_OF_MANSION.west = DOWN_SIDE_OF_MANSION
 BACKYARD_OF_MANSION.west = V2_SIDE_OF_MANSION
+V2_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
 V2_SIDE_OF_MANSION.north = UP_SIDE_OF_MANSION
+UP_SIDE_OF_MANSION.south = V2_SIDE_OF_MANSION
 UP_SIDE_OF_MANSION.east = V3_SIDE_OF_MANSION     # here need to fix because direction is wrong
+V3_SIDE_OF_MANSION.west = UP_SIDE_OF_MANSION
 V3_SIDE_OF_MANSION.east = COBBLE_STONE_STATUE
+COBBLE_STONE_STATUE.west = V3_SIDE_OF_MANSION
 COBBLE_STONE_STATUE.east = V2MANSION_DOOR
+V2MANSION_DOOR.west = COBBLE_STONE_STATUE
 V2MANSION_DOOR.south = INSIDE_MANSION
+INSIDE_MANSION.north = V2MANSION_DOOR
 # #option 1
 # # add the dependent rooms after
 # R19A = Room("R19A")
