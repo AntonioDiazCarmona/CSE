@@ -44,10 +44,11 @@ class ShortSword(Sword):
         super(ShortSword, self).__init__("short sword", 15, "short", 15)
 
     def attack(self):
-        random.randint(12, 15)
+        return random.randint(12, 15)
 
 
-my_shortsword = ShortSword
+my_shortsword = ShortSword()
+print(my_shortsword.attack())
 
 class Bow(Item):
      def __init__(self, name, weight, range, shoot, damage, arrows = 10):
@@ -57,15 +58,18 @@ class Bow(Item):
          self.damage = damage
          self.arrows = arrows
 
-     def Crossbow(self):
-         self.Crossbow = shoot
-        if
-            self.shoot = True
-            self.arrows =-1
-     def damage = 50
-     def range = 20
-shoot = True
+     def damage(self):
+          self.damage = 30
 
-class CrossBow(Bow):
+    def range(self):
+        self.range = 100
 
-     def __init__(self, name, weight,"Normal",15
+    def shoot(self):
+        self.shoot = True
+    else:
+        print("You have to press the trigger!")
+    def arrows = 10
+    if shoot(self= True -=1 arrows)
+class Crossbow(Bow):
+     def __init__(self):
+         super(Crossbow, self).__init__("CrossBow", 20, 100, True, 30, 10)
