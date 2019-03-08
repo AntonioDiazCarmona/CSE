@@ -7,11 +7,12 @@ class Item(object):
 
 
 class Axe(Item):
-    def __init__(self, name, weight, blade, damage):
+    def __init__(self, name, weight, blade, damage, durability):
         super(Axe, self).__init__(name, weight)
         self.handle = True
         self.blade = blade
         self.damage = damage
+        self.durability = durability
 
     def blade(self, long):
         self.blade = long
@@ -22,11 +23,8 @@ class Axe(Item):
 
 class LongAxe(Axe):
     def __init__(self, name, damage, blade, durability, weight):
-        super(Axe, self).__init__(name, weight, blade, damage,durability)
-        self.name = name
-        self.weight = weight
-        self.damage = damage
-        self.durability = 100
+        super(LongAxe, self).__init__(name, weight, blade, damage, durability)
+
     def attack(self):
         if self.durability > 0:
             print("you did a heavy swing and did", self.damage, "damage")
@@ -37,11 +35,9 @@ class LongAxe(Axe):
         else:
             print("you died")
 
-My_axe = Axe("LongAxe", 10, 100, )
-
+My_axe = LongAxe("LongAxe", 10, "Long", 100, 15 )
 My_axe.attack()
-
-My_axe.Amount_of_health()
+My_axe.Amount_of_Durability()
 
 # class LongAxe(Axe):
 #     def __init__(self, name, damage, health):
