@@ -418,9 +418,16 @@ class IceStaff(Staff):
                 print("You are frozen ")
     def Amount_of_Durability(self):
         if self.durability > 0:
-            print("you still have", self.durability, "durability left on your Ice staff Staff")
+            print("you still have", self.durability, "durability left on your Ice Staff ")
         else:
             print("you died")
 Ice_staff = IceStaff("IceStaff", 20, "Long", 50, 35)
 Ice_staff.Freeze()
 Ice_staff.Amount_of_Durability()
+
+#
+# class  Shield(Item):
+#     def __init__(self,name, weight, blockDamage, durability):
+#         super(Shield, self).__init__(name, weight)
+#         self.blockDamage = blockDamage
+#         self.durability = durability

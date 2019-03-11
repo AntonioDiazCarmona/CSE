@@ -13,7 +13,8 @@ class Hoverboard():
 
     def _turn_on(self):
         if self.turn_on == True:
-            print("Welcome to your new hoverboard!")  # if its is true in init basically means it wont ask you you else which is would you like to turn on hoverboard
+            print("Welcome to your new hoverboard!")
+        # if its is true in init basically means it wont ask you you else which is would you like to turn on hoverboard
         else:
             ans = input('Would you like to turn the hoverboard on?')  # it asks this because for init its put to false
             if ans.lower() == 'yes':
