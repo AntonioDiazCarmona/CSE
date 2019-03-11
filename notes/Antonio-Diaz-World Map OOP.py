@@ -18,21 +18,13 @@ class Player(object):
         self.damage = 10
 
     def move(self, new_location):
-        """this method moves charecters to a new location
+        """this method moves characters to a new location
 
-        :param newlocation:  the variable containing a room object
+        :param new_location:  the variable containing a room object
         """
         self.current_location = new_location
 
 
-class Mansion_defender(object):
-    def __init__(self, defender_location ):
-        self.health = 50
-        self.current_location = defender_location
-        self.weapon_damage = 10
-
-    def Where_Mansion_defender_is(self, defender_location):
-        self.defender_location = INSIDE_MANSION
 ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from the gate door a mile "
                                               "away"
                                               "This mansion who no one know's who built it or who live here and some"
