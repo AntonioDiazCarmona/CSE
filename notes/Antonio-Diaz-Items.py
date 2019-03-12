@@ -1,5 +1,12 @@
 import random
 
+debug = True
+if debug:
+    delay = 0.01
+else:
+    delay = 1
+
+
 class Item(object):
     def __init__(self, name, weight):
         self.name = name
@@ -392,7 +399,7 @@ class FireStaff(Staff):
             number_of_seconds = 5
 
             for _ in range(number_of_seconds):
-                time.sleep(1)
+                time.sleep(1 * delay)
                 print("You are taking 1 damage do to fire damage from the fire ball")
     def Amount_of_Durability(self):
         if self.durability > 0:
@@ -414,7 +421,7 @@ class IceStaff(Staff):
             import time
             number_of_seconds = 10
             for _ in range(number_of_seconds):
-                time.sleep(1)
+                time.sleep(1 * delay)
                 print("You are frozen ")
     def Amount_of_Durability(self):
         if self.durability > 0:
@@ -425,9 +432,97 @@ Ice_staff = IceStaff("IceStaff", 20, "Long", 50, 35)
 Ice_staff.Freeze()
 Ice_staff.Amount_of_Durability()
 
+
+class shield(Item):
+    def __init__(self, name, weight, blockdamage, durability):
+        super(shield, self).__init__(name, weight)
+        self.blockdamage = blockdamage
+        self.durability = durability
+
+    def blockdamage(self):
+        blockdamage = 50
+class ArmShield(shield):
+    def __init__(self, name, weight, blockdamage, durability):
+        super(ArmShield, self).__init__(name, weight,  blockdamage, durability)
+
+    def Block(self):
+        if self.durability > 0:
+            damage=int(input("how much damage would you like to recieve? "))
+            self.blockdamage = self.blockdamage - damage
+            self.durability = self.durability-damage
+    def Amount_of_Durability(self):
+        if self.durability > 0:
+            print("you still have", self.durability, "durability left on your arm shield")
+        else:
+            print("you ran out of durability and your shield broke")
+
+    def Shield_broke(self, damage):
+        if damage > self.blockdamage:
+            print("Your shield broke by taking", self.blockdamage-damage, "damage over the block damage of what "
+                                                                          "the arm shield handle at a time")
+        else:
+            print("you blocked", damage, "damage")
+
+Arm_shield = ArmShield("Arm Shield", 10, 50, 1000)
+Arm_shield.Block()
+Arm_shield.Amount_of_Durability()
+Arm_shield.Shield_broke(50)
+
+
+
+
+
+
+
 #
-# class  Shield(Item):
-#     def __init__(self,name, weight, blockDamage, durability):
-#         super(Shield, self).__init__(name, weight)
-#         self.blockDamage = blockDamage
-#         self.durability = durability
+# class MythicalShield(shield):
+#     def __init__(self, name, weight, blockdamage, durability):
+#         super(MythicalShield, self).__init__(name, weight, durability)
+#
+#     def Block(self):
+#         if self.durability > 0:
+#             damage=int(input("how much damage would you like to recieve on your mythical shield? "))
+#             # self.blockdamage = self.blockdamage+damage
+#             self.durability = self.durability+damage     # changes
+#             print("You got attack and you mythical shield absorve", damage, "damage and turned it into durabibility so your durability increase")
+#
+#     def Amount_of_Durability(self):
+#         if self.durability > 0:
+#             print("you have ", self.durability, "durability after absorbing the damage you took  ")
+#
+#
+# Mythical_Shield = MythicalShield("Mythical Shield", 10, 1000)
+#
+# Mythical_Shield.Block()
+#
+# Mythical_Shield.Amount_of_Durability()
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
