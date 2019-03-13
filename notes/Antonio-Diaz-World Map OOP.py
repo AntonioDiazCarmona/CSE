@@ -9,6 +9,32 @@ class Room(object):
         self.up = up
         self.down = down
 
+class Item(object):
+    def __init__(self, name):
+        self.name = name
+
+class weapon(Item):
+    def __init__(self, name, damage):
+        super(weapon, self).__init__(name)
+        self.damage = damage
+
+class charecter(object):
+    def __init__(self, name, health, weapon, armor):
+        self.name = name
+        self.health = health
+        self.weapon = weapon
+        self.armor = armor
+
+    def take_damage(self, damage):
+        self.health -= damage
+        if self.health < 0:
+            self.health = 0
+        print("%s has %d health left" % (self.name, self.health))
+
+    def attack(self, target):
+            print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+            target.take_damage(self.weapon.damage)
+
 
 class Player(object):
     def __init__(self, starting_location):
@@ -25,13 +51,27 @@ class Player(object):
         self.current_location = new_location
 
 
-ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from the gate door a mile "
-                                              "away"
+ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from"
+                                              " the gate door a mile away"
                                               "This mansion who no one know's who built it or who live here and some"
                                               " people have even said that the mansion has been abandoned for centuries"
                                               " and it has stayed the same. THe mansion has 15 rooms or does it?"
                                               " It also has a random statue with no head")
+
+sword = weapon("sword", 15)
+sword2 = weapon("orc sword", 5)
+
+
 player = Player(ABANDONED_MANSION)
+
+
+c1 = charecter("Orc1", 100, sword, None)
+c2 = charecter("Orc2",100, sword2, None)
+
+c1.attack(c2)
+c2.attack(c1)
+
+
 MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed and around you can see plants."
                                                   " To the south there is a window. To the west is a statue that"
                                                   " has no head.The door seems to be closed and around you can see"

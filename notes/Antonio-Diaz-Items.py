@@ -433,96 +433,179 @@ Ice_staff.Freeze()
 Ice_staff.Amount_of_Durability()
 
 
+class LightingStaff(Staff):
+    def __init__(self, name, weight, crystal, MagicDamage, durability):
+        super(LightingStaff, self).__init__(name, weight, crystal, MagicDamage, durability)
+    def attack(self):
+        if self.durability > 0:
+            print("You shot a lighting ball and did ", self.MagicDamage, "damage")
+            self.durability = self.durability - 1
+    def Amount_of_Durability(self):
+        if self.durability > 0:
+            print("you still have", self.durability, "durability left on your lighting Staff")
+        else:
+            print("you died")
+lighting_staff = LightingStaff("lighting staff", 15, "long", 100, 25)
+lighting_staff.attack()
+lighting_staff.Amount_of_Durability()
+
+
 class shield(Item):
+
     def __init__(self, name, weight, blockdamage, durability):
         super(shield, self).__init__(name, weight)
+
         self.blockdamage = blockdamage
+
         self.durability = durability
 
     def blockdamage(self):
         blockdamage = 50
+
+
 class ArmShield(shield):
+
     def __init__(self, name, weight, blockdamage, durability):
-        super(ArmShield, self).__init__(name, weight,  blockdamage, durability)
+
+        super(ArmShield, self).__init__(name, weight, blockdamage, durability)
 
     def Block(self):
+
         if self.durability > 0:
-            damage=int(input("how much damage would you like to recieve? "))
-            self.blockdamage = self.blockdamage - damage
-            self.durability = self.durability-damage
+            damage = int(input("how much damage would you like to recieve? "))
+
+            self.Shield_broke(damage)
+
+            # self.blockdamage = self.blockdamage - damage
+
+            self.durability = self.durability - damage
+
+            print("you blocked", damage, "damage")
+
     def Amount_of_Durability(self):
+
         if self.durability > 0:
+
             print("you still have", self.durability, "durability left on your arm shield")
+
         else:
+
             print("you ran out of durability and your shield broke")
 
     def Shield_broke(self, damage):
+
         if damage > self.blockdamage:
-            print("Your shield broke by taking", self.blockdamage-damage, "damage over the block damage of what "
-                                                                          "the arm shield handle at a time")
-        else:
-            print("you blocked", damage, "damage")
+            print("Your shield broke by taking", self.blockdamage - damage,
+                  "damage over the block damage of what "                                                              "the arm shield handle at a time")
+
+            # else:
+
+        #     print("you blocked", damage, "damage")
+
 
 Arm_shield = ArmShield("Arm Shield", 10, 50, 1000)
+
 Arm_shield.Block()
+
 Arm_shield.Amount_of_Durability()
+
 Arm_shield.Shield_broke(50)
 
 
+class MythicalShield(shield):
+
+    def __init__(self, name, weight, blockdamage, durability):
+
+        super(MythicalShield, self).__init__(name, weight, blockdamage, durability)
+
+    def Block(self):
+
+        if self.durability > 0:
+            damage = int(input("how much damage would you like to recieve on your mythical shield? "))
+
+            self.durability = self.durability + damage  # changes
+
+            print("You got attack and you mythical shield absorve", damage,
+                  "damage and turned it into durabibility so your durability increase")
+
+    def Amount_of_Durability(self):
+
+        if self.durability > 0:
+            print("you have ", self.durability, "durability after absorbing the damage you took  ")
+
+
+Mythical_Shield = MythicalShield("Mythical Shield", 10, 0, 500)
+
+Mythical_Shield.Block()
+
+Mythical_Shield.Amount_of_Durability()
+
+
+class NerfGun(Item):
+    def __init__(self, name, weight, bullets, damage, durability):
+        super(NerfGun, self).__init__(name, weight)
+        self.bullets = bullets
+        self.damage = damage
+        self.durability = durability
+    def bullets(self):
+        self.bullets = bullets
+
+    def damage(self):
+        self.damage = damage
+
+class AssaultRifle(NerfGun):
+    def __init__(self, name, weight, bullets, damage, durability):
+        super(AssaultRifle, self).__init__(name, weight, bullets, damage, durability)
+    def shoot(self):
+        if self.bullets > 0:
+            print('You shot a nerf bullet  with your assault rifle and did ', self.damage, 'damage')
+            self.bullets = self.bullets - 1
+            self.durability = self.durability - 1
+        else:
+            print('...')
+    def howManyBulletsLeft(self):
+        if self.bullets > 0:
+            print("You STILL have", self.bullets, "bullets left")
+        else:
+            print("You got nothing")
+    def Amount_of_Durability(self):
+        if self.durability > 0:
+            print("you still have", self.durability, "durability left on your nerf assault rifle")
+        else:
+            print("you have no durability")
+Assault_Rifle = AssaultRifle("Assault Rifle", 15, 30, 20, 200)
+Assault_Rifle.shoot()
+Assault_Rifle.howManyBulletsLeft()
+Assault_Rifle.Amount_of_Durability()
+
+class BurstRifle(NerfGun):
+    def __init__(self, name, weight, bullets, damage, durability):
+        super(BurstRifle, self).__init__(name, weight, bullets, damage, durability)
+    def shoot(self):
+        if self.bullets > 0:
+            print('You shot 3 nerf bullets with your burst rifle and did ', self.damage, 'damage')
+            self.bullets = self.bullets - 3
+            self.durability = self.durability - 1
+        else:
+            print('...')
+    def howManyBulletsLeft(self):
+        if self.bullets > 0:
+            print("You STILL have", self.bullets, "bullets left")
+        else:
+            print("You got nothing")
+    def Amount_of_Durability(self):
+        if self.durability > 0:
+            print("you still have", self.durability, "durability left on your nerf burst rifle")
+        else:
+            print("you have no durability")
+Burst_Rifle = BurstRifle("Burst Rifle", 15, 20, 15, 100)
+Burst_Rifle.shoot()
+Burst_Rifle.howManyBulletsLeft()
+Burst_Rifle.Amount_of_Durability()
 
 
 
 
 
-#
-# class MythicalShield(shield):
-#     def __init__(self, name, weight, blockdamage, durability):
-#         super(MythicalShield, self).__init__(name, weight, durability)
-#
-#     def Block(self):
-#         if self.durability > 0:
-#             damage=int(input("how much damage would you like to recieve on your mythical shield? "))
-#             # self.blockdamage = self.blockdamage+damage
-#             self.durability = self.durability+damage     # changes
-#             print("You got attack and you mythical shield absorve", damage, "damage and turned it into durabibility so your durability increase")
-#
-#     def Amount_of_Durability(self):
-#         if self.durability > 0:
-#             print("you have ", self.durability, "durability after absorbing the damage you took  ")
-#
-#
-# Mythical_Shield = MythicalShield("Mythical Shield", 10, 1000)
-#
-# Mythical_Shield.Block()
-#
-# Mythical_Shield.Amount_of_Durability()
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+
+
