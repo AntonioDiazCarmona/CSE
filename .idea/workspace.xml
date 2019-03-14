@@ -18,7 +18,7 @@
     <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_Hang_Man.coverage" NAME="Antonio Diaz-Hang Man Coverage Results" MODIFIED="1548692883970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Object_Notes.coverage" NAME="Object Notes Coverage Results" MODIFIED="1550075712096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Inheritance.coverage" NAME="Inheritance Coverage Results" MODIFIED="1551461034447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_Items.coverage" NAME="Antonio-Diaz-Items Coverage Results" MODIFIED="1552488981658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_Items.coverage" NAME="Antonio-Diaz-Items Coverage Results" MODIFIED="1552576163979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Basic_Python_Notes.coverage" NAME="Basic Python Notes Coverage Results" MODIFIED="1547832059362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Dictionary_Notes.coverage" NAME="Dictionary Notes Coverage Results" MODIFIED="1548865106961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
   </component>
@@ -40,7 +40,7 @@
     <session id="597598309">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="45" />
+          <entry key="project.closed" value="46" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.113" value="1" />
@@ -63,7 +63,7 @@
           <entry key="project.open.time.61" value="2" />
           <entry key="project.open.time.62" value="3" />
           <entry key="project.open.time.63" value="1" />
-          <entry key="project.open.time.64" value="1" />
+          <entry key="project.open.time.64" value="2" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.70" value="1" />
@@ -75,7 +75,7 @@
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="47" />
+          <entry key="project.opened" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -90,14 +90,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="7" />
-          <entry key="py" value="31196" />
+          <entry key="dummy" value="12" />
+          <entry key="py" value="31335" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="31196" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="31335" />
         </counts>
       </usages-collector>
     </session>
@@ -132,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notes/Antonio-Diaz-World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            <state relative-caret-position="408">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <marker date="1552491485362" expanded="true" signature="131:136" ph="..." />
                 <marker date="1552491485362" expanded="true" signature="366:423" ph="..." />
@@ -174,8 +174,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Antonio-Diaz-Items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="542" lean-forward="true" selection-start-line="542" selection-end-line="542" />
+            <state relative-caret-position="458">
+              <caret line="471" lean-forward="true" selection-start-line="471" selection-end-line="471" />
             </state>
           </provider>
         </entry>
@@ -252,7 +252,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Antonio-Diaz-World Map OOP">
+  <component name="RunManager" selected="Python.Antonio-Diaz-Items">
     <configuration name="Antonio-Diaz-Items" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CSE" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -372,8 +372,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Antonio-Diaz-World Map OOP" />
         <item itemvalue="Python.Antonio-Diaz-Items" />
+        <item itemvalue="Python.Antonio-Diaz-World Map OOP" />
         <item itemvalue="Python.Inheritance" />
         <item itemvalue="Python.Antonio_Diaz-Object" />
         <item itemvalue="Python.Object" />
@@ -401,8 +401,8 @@
       <window_info id="Favorites" order="1" side_tool="true" weight="0.32980332" />
       <window_info id="Structure" order="2" weight="0.24962178" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.31096563" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.31096563" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -522,6 +522,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/notes/Antonio-Diaz-World Map OOP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <marker date="1552491485362" expanded="true" signature="131:136" ph="..." />
+            <marker date="1552491485362" expanded="true" signature="366:423" ph="..." />
+            <marker date="1552491485362" expanded="true" signature="442:554" ph="..." />
+            <marker date="1552491485362" expanded="true" signature="1107:1110" ph="..." />
+            <marker date="1552491485362" expanded="true" signature="1131:1525" ph="..." />
+            <marker date="1552491485362" expanded="true" signature="1524:1525" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/notes/Antonio Diaz-Dictionary World Map.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2380">
@@ -543,25 +558,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/Antonio-Diaz-World Map OOP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <marker date="1552491485362" expanded="true" signature="131:136" ph="..." />
-            <marker date="1552491485362" expanded="true" signature="366:423" ph="..." />
-            <marker date="1552491485362" expanded="true" signature="442:554" ph="..." />
-            <marker date="1552491485362" expanded="true" signature="1107:1110" ph="..." />
-            <marker date="1552491485362" expanded="true" signature="1131:1525" ph="..." />
-            <marker date="1552491485362" expanded="true" signature="1524:1525" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notes/Antonio-Diaz-Items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="542" lean-forward="true" selection-start-line="542" selection-end-line="542" />
+        <state relative-caret-position="458">
+          <caret line="471" lean-forward="true" selection-start-line="471" selection-end-line="471" />
         </state>
       </provider>
     </entry>
