@@ -6,7 +6,10 @@ else:
 
 
 class Room(object):
-    def __init__(self, name, description="", north=None, south=None, east=None, west=None, up=None, down=None):
+    def __init__(self, name, description="", north=None, south=None, east=None, west=None, up=None, down=None,
+                 items=None):
+        if items is None:
+            items = [Long_Axe, Long_Sword]
         self.name = name
         self.north = north
         self.south = south
@@ -15,6 +18,7 @@ class Room(object):
         self.west = west
         self.up = up
         self.down = down
+        self.items = items
 
 
 class Item(object):
@@ -409,13 +413,7 @@ class NinjaStar(ThrowingThings):
         else:
             print("you threw the ninja star but missed...")
 
-
-
-
-
-
-
-#  Charecters
+#  Characters
 
 
 class Character(object):
@@ -467,10 +465,6 @@ Assault_Rifle = AssaultRifle("Assault Rifle", 15, 30, 20, 200)
 Burst_Rifle = BurstRifle("Burst Rifle", 15, 20, 15, 100)
 rock = Rock("Rock", 4, 10)
 Ninja_Star = NinjaStar("Ninja Star", 2, 15)
-
-
-
-
 c1 = Character("Orc1", 100, Long_Axe, None)
 c2 = Character("Orc2", 100, Long_Bow, None)
 
@@ -529,9 +523,7 @@ ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abando
                                               " and it has stayed the same. THe mansion has 15 rooms or does it?"
                                               " It also has a random statue with no head")
 
-
-
-# you open the door with the key,get in.
+#  you open the door with the key,get in.
 
 ABANDONED_MANSION.south = MANSION_DOOR
 MANSION_DOOR.north = ABANDONED_MANSION

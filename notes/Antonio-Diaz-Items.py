@@ -398,6 +398,42 @@ class NinjaStar(ThrowingThings):
             print("you threw the ninja star but missed...")
 
 
+class ThingsInGame(Item):
+    def __init__(self, name, weight, durability):
+        super(ThingsInGame, self).__init__(name, weight)
+        self.durability = durability
+
+
+class Stool(ThingsInGame):
+    def __init__(self, name, weight, durability):
+        super(Stool, self).__init__(name, weight, durability)
+
+    def place(self):
+        if self.durability > 0:
+            print("You placed the the stool and you can now reach the top of the statue with no head")
+        else:
+            print("you need to place the stool closer")
+
+
+stool = Stool("stool", 10, 100)
+stool.place()
+
+
+class Keys(ThingsInGame):
+    def __init__(self, name, weight, durability):
+        super(Keys, self).__init__(name, weight, durability)
+
+    def rotate(self):
+        if self.durability > 0:
+            print("You rotates the key and opened the door")
+        else:
+            print("you need to rotate the key to open the mansion door")
+
+
+key = Keys("Key", 1, 1000)
+key.rotate()
+
+
 # Instantiate Items
 Long_Axe = LongAxe("LongAxe", 30, "Long", 100, 20)
 Short_Axe = ShortAxe("ShortAxe", 15, "small", 50, 10)
