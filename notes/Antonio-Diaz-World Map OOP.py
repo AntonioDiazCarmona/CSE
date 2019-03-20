@@ -5,11 +5,13 @@ else:
     delay = 1
 
 
+class LockException(Exception):
+    pass
+
+
 class Room(object):
     def __init__(self, name, description="", north=None, south=None, east=None, west=None, up=None, down=None,
                  items=None):
-        if items is None:
-            items = [Long_Axe, Long_Sword]
         self.name = name
         self.north = north
         self.south = south
@@ -413,6 +415,36 @@ class NinjaStar(ThrowingThings):
         else:
             print("you threw the ninja star but missed...")
 
+
+class ThingsInGame(Item):
+    def __init__(self, name, weight, durability):
+        super(ThingsInGame, self).__init__(name, weight)
+        self.durability = durability
+
+
+class Stool(ThingsInGame):
+    def __init__(self, name, weight, durability):
+        super(Stool, self).__init__(name, weight, durability)
+
+    def place(self):
+        if self.durability > 0:
+            print("You placed the the stool and you can now reach the top of the statue with no head")
+        else:
+            print("you need to place the stool closer")
+
+
+class Keys(ThingsInGame):
+    def __init__(self, name, weight, durability):
+        super(Keys, self).__init__(name, weight, durability)
+
+    def rotate(self):
+        if self.durability > 0:
+            print("You rotates the key and opened the door")
+        else:
+            print("you need to rotate the key to open the mansion door")
+
+
+
 #  Characters
 
 
@@ -467,12 +499,16 @@ rock = Rock("Rock", 4, 10)
 Ninja_Star = NinjaStar("Ninja Star", 2, 15)
 c1 = Character("Orc1", 100, Long_Axe, None)
 c2 = Character("Orc2", 100, Long_Bow, None)
+stool = Stool("stool", 10, 100)
+key = Keys("Key", 1, 1000)
+
+
 
 
 MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed and around you can see plants."
                                                   " To the south there is a window. To the west is a statue that"
                                                   " has no head.The door seems to be closed and around you can see"
-                                                  " plants.")
+                                                  " plants.", None, None, None, None, None, None, Long_Axe)
 MANSION_WINDOW = Room("EAST SIDE WINDOW", "The window seems to be a mirror ")
 
 EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansion seems to be blocked off by a giant"
@@ -482,7 +518,8 @@ V2MANSION_WINDOW = Room("WEST SIDE WINDOW OF MANSION", "You are back to the wind
 STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head "
                                     "You can see a metal piece on top of the statue with there is no head"
                                     "the statue is to high you will need something to climb on the statue and"
-                                    "get the metal piece,to the south is the west side of the mansion.")
+                                    "get the metal piece,to the south is the west side of the mansion.", None, None,
+              None, None, None, None, key)
 
 V1_SIDE_OF_MANSION = Room("south side of mansion", "You are looking at the south side of mansion which leads"
                                                    " to the backyard")
@@ -559,7 +596,6 @@ V2MANSION_DOOR.south = INSIDE_MANSION
 INSIDE_MANSION.north = V2MANSION_DOOR
 
 player = Player(ABANDONED_MANSION)
-
 playing = True
 directions = ["north", "south", "east", "west", "up", "down"]
 
@@ -567,6 +603,10 @@ directions = ["north", "south", "east", "west", "up", "down"]
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+
+    if player.current_location.items is not None:
+        print("There is a %s here." % player.current_location.items.name)
+
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
@@ -574,6 +614,10 @@ while playing:
         try:
             # command ='north'#if their is now location you put none# so this basically tell it if i has a path to north
             room_object_that_we_move_to = getattr(player.current_location, command)
+            if player.current_location == MANSION_DOOR and command.lower() in ["south", 's']:
+                if key not in player.inventory:
+                    raise LockException
+
             if room_object_that_we_move_to is None:
                 raise AttributeError
             player.move(room_object_that_we_move_to)
@@ -581,5 +625,8 @@ while playing:
             print("this key does not exist")
         except AttributeError:
             print("I can't go that way.")
+        except LockException:
+            print("It's locked.")
     else:
         print("Command Not Recognized")
+    print()

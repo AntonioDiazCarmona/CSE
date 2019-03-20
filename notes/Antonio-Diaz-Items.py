@@ -415,8 +415,6 @@ class Stool(ThingsInGame):
             print("you need to place the stool closer")
 
 
-stool = Stool("stool", 10, 100)
-stool.place()
 
 
 class Keys(ThingsInGame):
@@ -429,6 +427,10 @@ class Keys(ThingsInGame):
         else:
             print("you need to rotate the key to open the mansion door")
 
+
+
+stool = Stool("stool", 10, 100)
+stool.place()
 
 key = Keys("Key", 1, 1000)
 key.rotate()
