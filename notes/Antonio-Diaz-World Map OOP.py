@@ -443,8 +443,6 @@ class Keys(ThingsInGame):
         else:
             print("you need to rotate the key to open the mansion door")
 
-
-
 #  Characters
 
 
@@ -503,12 +501,10 @@ stool = Stool("stool", 10, 100)
 key = Keys("Key", 1, 1000)
 
 
-
-
 MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed and around you can see plants."
                                                   " To the south there is a window. To the west is a statue that"
                                                   " has no head.The door seems to be closed and around you can see"
-                                                  " plants.", None, None, None, None, None, None, Long_Axe)
+                                                  " plants.", None, None, None, None, None, None)
 MANSION_WINDOW = Room("EAST SIDE WINDOW", "The window seems to be a mirror ")
 
 EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansion seems to be blocked off by a giant"
@@ -527,7 +523,8 @@ V1_SIDE_OF_MANSION = Room("south side of mansion", "You are looking at the south
 DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You are walking down the south side of mansion")
 
 BACKYARD_OF_MANSION = Room("EAST BACKYARD", "You are at the back yard and their seems to be alot of items at"
-                                            " the backyard like stools,slide,and a small little tree")
+                                            " the backyard like stools,slide,and a small little tree", None, None, None
+                           , None, None, None, Stool)
 # here you would get a stool
 
 V2_SIDE_OF_MANSION = Room("WEST SIDE OF MANSION", "You are looking at the side of the mansion you came from")
