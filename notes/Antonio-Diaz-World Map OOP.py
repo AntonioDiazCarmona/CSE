@@ -509,7 +509,7 @@ MANSION_WINDOW = Room("EAST SIDE WINDOW", "The window seems to be a mirror ")
 
 EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansion seems to be blocked off by a giant"
                                                     "tree.")
-V2MANSION_WINDOW = Room("WEST SIDE WINDOW OF MANSION", "You are back to the window that seems to be a mirror")
+V2MANSION_WINDOW = Room("EAST SIDE WINDOW OF MANSION", "You are back to the window that seems to be a mirror")
 
 STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head "
                                     "You can see a metal piece on top of the statue with there is no head"
@@ -523,8 +523,8 @@ V1_SIDE_OF_MANSION = Room("south side of mansion", "You are looking at the south
 DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You are walking down the south side of mansion")
 
 BACKYARD_OF_MANSION = Room("EAST BACKYARD", "You are at the back yard and their seems to be alot of items at"
-                                            " the backyard like stools,slide,and a small little tree", None, None, None
-                           , None, None, None, Stool)
+                                            " the backyard like stools,slide,and a small little tree") #, None, None, None
+                          # , None, None, None, Stool)
 # here you would get a stool
 
 V2_SIDE_OF_MANSION = Room("WEST SIDE OF MANSION", "You are looking at the side of the mansion you came from")
@@ -560,20 +560,29 @@ ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abando
 #  you open the door with the key,get in.
 
 ABANDONED_MANSION.south = MANSION_DOOR
+
 MANSION_DOOR.north = ABANDONED_MANSION
-MANSION_DOOR.east = MANSION_WINDOW
+
+MANSION_DOOR.east = MANSION_WINDOW    # doesnt say this for some reason
+
 MANSION_WINDOW.west = MANSION_DOOR  # here up is mostly done just need something else
-MANSION_DOOR.east = MANSION_WINDOW
+
+
 MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
-EAST_SIDE_OF_MANSION.west = MANSION_DOOR
-MANSION_DOOR.east = EAST_SIDE_OF_MANSION
+
 EAST_SIDE_OF_MANSION.west = V2MANSION_WINDOW
+
+
 V2MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
+
 V2MANSION_WINDOW.west = MANSION_DOOR
-MANSION_DOOR.east = V2MANSION_WINDOW
+
 MANSION_DOOR.west = STATUE  # here where you keep going
+
 STATUE.east = MANSION_DOOR
+
 STATUE.south = V1_SIDE_OF_MANSION
+
 V1_SIDE_OF_MANSION.north = STATUE
 V1_SIDE_OF_MANSION.south = DOWN_SIDE_OF_MANSION
 DOWN_SIDE_OF_MANSION.north = V1_SIDE_OF_MANSION  # 5
@@ -582,6 +591,7 @@ BACKYARD_OF_MANSION.west = DOWN_SIDE_OF_MANSION
 BACKYARD_OF_MANSION.west = V2_SIDE_OF_MANSION
 V2_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
 V2_SIDE_OF_MANSION.north = UP_SIDE_OF_MANSION
+
 UP_SIDE_OF_MANSION.south = V2_SIDE_OF_MANSION
 UP_SIDE_OF_MANSION.east = V3_SIDE_OF_MANSION     # here need to fix because direction is wrong
 V3_SIDE_OF_MANSION.west = UP_SIDE_OF_MANSION

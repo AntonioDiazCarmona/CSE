@@ -16,7 +16,7 @@
     <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_Dictionary_World_Map.coverage" NAME="Antonio Diaz-Dictionary World Map Coverage Results" MODIFIED="1549647677909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$test_file.coverage" NAME="test file Coverage Results" MODIFIED="1553009404872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Object.coverage" NAME="Object Coverage Results" MODIFIED="1550594380333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
-    <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_World_Map_OOP.coverage" NAME="Antonio-Diaz-World Map OOP Coverage Results" MODIFIED="1553182931703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
+    <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_World_Map_OOP.coverage" NAME="Antonio-Diaz-World Map OOP Coverage Results" MODIFIED="1553272138946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_Hang_Man.coverage" NAME="Antonio Diaz-Hang Man Coverage Results" MODIFIED="1548692883970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Inheritance.coverage" NAME="Inheritance Coverage Results" MODIFIED="1551461034447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
     <SUITE FILE_PATH="coverage/CSE$Antonio_Diaz_Items.coverage" NAME="Antonio-Diaz-Items Coverage Results" MODIFIED="1552668277397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/notes" />
@@ -41,7 +41,7 @@
     <session id="597598309">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="51" />
+          <entry key="project.closed" value="52" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.107" value="1" />
           <entry key="project.open.time.110" value="1" />
@@ -67,7 +67,7 @@
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.64" value="2" />
           <entry key="project.open.time.65" value="1" />
-          <entry key="project.open.time.66" value="2" />
+          <entry key="project.open.time.66" value="3" />
           <entry key="project.open.time.70" value="1" />
           <entry key="project.open.time.71" value="3" />
           <entry key="project.open.time.72" value="4" />
@@ -78,7 +78,7 @@
           <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.88" value="1" />
-          <entry key="project.opened" value="53" />
+          <entry key="project.opened" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -94,13 +94,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="505" />
-          <entry key="py" value="33237" />
+          <entry key="py" value="33337" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="505" />
-          <entry key="Python" value="33237" />
+          <entry key="Python" value="33337" />
         </counts>
       </usages-collector>
     </session>
@@ -151,14 +151,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/notes/Antonio-Diaz-World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="517" column="42" lean-forward="true" selection-start-line="517" selection-start-column="42" selection-end-line="517" selection-end-column="42" />
+            <state relative-caret-position="243">
+              <caret line="639" lean-forward="true" selection-start-line="639" selection-end-line="639" />
               <folding>
-                <marker date="1553182739024" expanded="true" signature="93:105" ph="..." />
-                <marker date="1553182739024" expanded="true" signature="14772:14789" ph="..." />
-                <marker date="1553182739024" expanded="true" signature="15342:15345" ph="..." />
-                <marker date="1553182739024" expanded="true" signature="15366:15760" ph="..." />
-                <marker date="1553182739024" expanded="true" signature="15759:15760" ph="..." />
+                <marker date="1553272296916" expanded="true" signature="93:105" ph="..." />
+                <marker date="1553272296916" expanded="true" signature="14772:14789" ph="..." />
+                <marker date="1553272296916" expanded="true" signature="15342:15345" ph="..." />
+                <marker date="1553272296916" expanded="true" signature="15366:15760" ph="..." />
+                <marker date="1553272296916" expanded="true" signature="15759:15760" ph="..." />
               </folding>
             </state>
           </provider>
@@ -568,14 +568,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/notes/Antonio-Diaz-World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="517" column="42" lean-forward="true" selection-start-line="517" selection-start-column="42" selection-end-line="517" selection-end-column="42" />
+        <state relative-caret-position="243">
+          <caret line="639" lean-forward="true" selection-start-line="639" selection-end-line="639" />
           <folding>
-            <marker date="1553182739024" expanded="true" signature="93:105" ph="..." />
-            <marker date="1553182739024" expanded="true" signature="14772:14789" ph="..." />
-            <marker date="1553182739024" expanded="true" signature="15342:15345" ph="..." />
-            <marker date="1553182739024" expanded="true" signature="15366:15760" ph="..." />
-            <marker date="1553182739024" expanded="true" signature="15759:15760" ph="..." />
+            <marker date="1553272296916" expanded="true" signature="93:105" ph="..." />
+            <marker date="1553272296916" expanded="true" signature="14772:14789" ph="..." />
+            <marker date="1553272296916" expanded="true" signature="15342:15345" ph="..." />
+            <marker date="1553272296916" expanded="true" signature="15366:15760" ph="..." />
+            <marker date="1553272296916" expanded="true" signature="15759:15760" ph="..." />
           </folding>
         </state>
       </provider>
