@@ -508,7 +508,7 @@ MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed a
 MANSION_WINDOW = Room("EAST SIDE WINDOW", "The window seems to be a mirror ")
 
 EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansion seems to be blocked off by a giant"
-                                                    "tree.")
+                                                    " tree.")
 V2MANSION_WINDOW = Room("EAST SIDE WINDOW OF MANSION", "You are back to the window that seems to be a mirror")
 
 STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head "
@@ -517,27 +517,28 @@ STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone stat
                                     "get the metal piece,to the south is the west side of the mansion.", None, None,
               None, None, None, None, key)
 
-V1_SIDE_OF_MANSION = Room("south side of mansion", "You are looking at the south side of mansion which leads"
-                                                   " to the backyard")
+V1_SIDE_OF_MANSION = Room("West side of mansion", "You are looking down the south side of mansion which leads"
+                                                  " to the backyard.")
 
-DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You are walking down the south side of mansion")
+DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You walked down the south side of mansion, to the "
+                                                          "east is the backyard of mansion")
 
-BACKYARD_OF_MANSION = Room("EAST BACKYARD", "You are at the back yard and their seems to be alot of items at"
-                                            " the backyard like stools,slide,and a small little tree") #, None, None, None
-                          # , None, None, None, Stool)
-# here you would get a stool
+BACKYARD_OF_MANSION = Room("EAST BACKYARD", "You are at the back yard and their seems to be a lot of items at"
+                                            " the backyard like a slide a stool and a lot of tables for some reason")
 
-V2_SIDE_OF_MANSION = Room("WEST SIDE OF MANSION", "You are looking at the side of the mansion you came from")
+V2_SIDE_OF_MANSION = Room("WEST SIDE OF MANSION", "You are looking at the side of the mansion you came from, to go"
+                                                  " back up go to the north")
 
-UP_SIDE_OF_MANSION = Room("UP NORTH,WEST SIDE OF MANSION", "This is the way you came from in the begining to"
-                                                           " go to the back yard")
+UP_SIDE_OF_MANSION = Room("UP NORTH,WEST SIDE OF MANSION", "You walked up the north side of mansion which was the way"
+                                                           " walked in the begining to go to the back yard, to the east"
+                                                           " is the west side of mansion")
 
-V3_SIDE_OF_MANSION = Room("West side of mansion", "You are at the west side of mansion to the east you"
-                                                  " can see the coble stone statue from before")
+V3_SIDE_OF_MANSION = Room("West side of mansion", "You are at the west side of mansion to the east is"
+                                                  " the cobblestone statue from before")
 
-COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE", "You are at the cobble stone statue now try to see what"
+COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE", "You are at the cobblestone statue now try to see what"
                                                        " is the top of the cobblestone statue with no head"
-                                                       "by placing the stool that you collected from the"
+                                                       " by placing the stool that you collected from the"
                                                        " backyard and try climbing it to see what was"
                                                        " at the top of the no head statue")
 # you find the key...
@@ -551,8 +552,8 @@ INSIDE_MANSION = Room("INSIDE OF MANSION", "Their seems to be a lot of rooms her
                                            " random doll sitting on the stairs")
 
 ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from"
-                                              " the gate door a mile away"
-                                              "This mansion who no one know's who built it or who live here and some"
+                                              " the gate door a mile away."
+                                              " This mansion who no one know's who built it or who live here and some"
                                               " people have even said that the mansion has been abandoned for centuries"
                                               " and it has stayed the same. THe mansion has 15 rooms or does it?"
                                               " It also has a random statue with no head")
