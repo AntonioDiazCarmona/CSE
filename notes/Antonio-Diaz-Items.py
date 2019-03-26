@@ -426,9 +426,6 @@ class Keys(ThingsInGame):
             print("you need to rotate the key to open the mansion door")
 
 
-
-
-
 # Instantiate Items
 Long_Axe = LongAxe("LongAxe", 30, "Long", 100, 20)
 Short_Axe = ShortAxe("ShortAxe", 15, "small", 50, 10)
