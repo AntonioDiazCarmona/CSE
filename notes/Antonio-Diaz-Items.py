@@ -445,8 +445,8 @@ rock = Rock("Rock", 4, 10)
 Ninja_Star = NinjaStar("Ninja Star", 2, 15)
 stool = Stool("stool", 10, 100)
 key = Keys("Key", 1, 1000)
-#  call what to do
 
+#  call what to do
 Long_Axe.attack()
 Long_Axe.amount_of_durability()
 Short_Axe.attack()
