@@ -415,8 +415,6 @@ class Stool(ThingsInGame):
             print("you need to place the stool closer")
 
 
-
-
 class Keys(ThingsInGame):
     def __init__(self, name, weight, durability):
         super(Keys, self).__init__(name, weight, durability)
@@ -429,11 +427,6 @@ class Keys(ThingsInGame):
 
 
 
-stool = Stool("stool", 10, 100)
-stool.place()
-
-key = Keys("Key", 1, 1000)
-key.rotate()
 
 
 # Instantiate Items
@@ -453,7 +446,8 @@ Assault_Rifle = AssaultRifle("Assault Rifle", 15, 30, 20, 200)
 Burst_Rifle = BurstRifle("Burst Rifle", 15, 20, 15, 100)
 rock = Rock("Rock", 4, 10)
 Ninja_Star = NinjaStar("Ninja Star", 2, 15)
-
+stool = Stool("stool", 10, 100)
+key = Keys("Key", 1, 1000)
 #  call what to do
 
 Long_Axe.attack()
@@ -492,3 +486,5 @@ Burst_Rifle.how_many_bullets_left()
 Burst_Rifle.amount_of_durability()
 Ninja_Star.throw()
 rock.throw()
+stool.place()
+key.rotate()

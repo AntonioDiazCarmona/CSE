@@ -504,11 +504,13 @@ key = Keys("Key", 1, 1000)
 MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed and around you can see plants."
                                                   " To the south there is a window. To the west is a statue that"
                                                   " has no head.The door seems to be closed and around you can see"
-                                                  " plants.", None, None, None, None, None, None)
+                                                  " plants.")
 MANSION_WINDOW = Room("EAST SIDE WINDOW", "The window seems to be a mirror ")
 
 EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansion seems to be blocked off by a giant"
-                                                    " tree.")
+                                                    " tree. There is also a short sword leaning on the tree"
+                                                    " it look very very old.", None, None, None,
+                            None, None, None, Short_Sword)
 V2MANSION_WINDOW = Room("EAST SIDE WINDOW OF MANSION", "You are back to the window that seems to be a mirror")
 
 STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head "
@@ -524,7 +526,8 @@ DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You walked down the s
                                                           "east is the backyard of mansion")
 
 BACKYARD_OF_MANSION = Room("EAST BACKYARD", "You are at the back yard and their seems to be a lot of items at"
-                                            " the backyard like a slide a stool and a lot of tables for some reason")
+                                            " the backyard like a slide a stool and a lot of tables for some reason.",
+                           None, None, None, None, None, None, stool)
 
 V2_SIDE_OF_MANSION = Room("WEST SIDE OF MANSION", "You are looking at the side of the mansion you came from, to go"
                                                   " back up go to the north")
@@ -561,29 +564,16 @@ ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abando
 #  you open the door with the key,get in.
 
 ABANDONED_MANSION.south = MANSION_DOOR
-
 MANSION_DOOR.north = ABANDONED_MANSION
-
 MANSION_DOOR.east = MANSION_WINDOW    # doesnt say this for some reason
-
 MANSION_WINDOW.west = MANSION_DOOR  # here up is mostly done just need something else
-
-
 MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
-
 EAST_SIDE_OF_MANSION.west = V2MANSION_WINDOW
-
-
 V2MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
-
 V2MANSION_WINDOW.west = MANSION_DOOR
-
 MANSION_DOOR.west = STATUE  # here where you keep going
-
 STATUE.east = MANSION_DOOR
-
 STATUE.south = V1_SIDE_OF_MANSION
-
 V1_SIDE_OF_MANSION.north = STATUE
 V1_SIDE_OF_MANSION.south = DOWN_SIDE_OF_MANSION
 DOWN_SIDE_OF_MANSION.north = V1_SIDE_OF_MANSION  # 5
@@ -592,7 +582,6 @@ BACKYARD_OF_MANSION.west = DOWN_SIDE_OF_MANSION
 BACKYARD_OF_MANSION.west = V2_SIDE_OF_MANSION
 V2_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
 V2_SIDE_OF_MANSION.north = UP_SIDE_OF_MANSION
-
 UP_SIDE_OF_MANSION.south = V2_SIDE_OF_MANSION
 UP_SIDE_OF_MANSION.east = V3_SIDE_OF_MANSION     # here need to fix because direction is wrong
 V3_SIDE_OF_MANSION.west = UP_SIDE_OF_MANSION
