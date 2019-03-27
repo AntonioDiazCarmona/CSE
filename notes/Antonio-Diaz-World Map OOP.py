@@ -612,7 +612,7 @@ while playing:
     # if player.pickup.items.name == True:
     #      print("do you want to pick up item")
     # if int(input("yes")):
-    #      player.inventory + player.items
+    #      player.inventory + items
 
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
