@@ -22,6 +22,8 @@ class Room(object):
         self.down = down
         self.items = items
 
+# ======================================================================================================================
+
 
 class Item(object):
     def __init__(self, name, weight):
@@ -443,7 +445,8 @@ class Keys(ThingsInGame):
         else:
             print("you need to rotate the key to open the mansion door")
 
-#  Characters
+
+# ===========================================Character==================================================================
 
 
 class Character(object):
@@ -465,11 +468,12 @@ class Character(object):
 
 
 class Player(object):
-    def __init__(self, starting_location):
+    def __init__(self, starting_location, pickup):
         self.health = 100
         self.current_location = starting_location
         self.inventory = []
         self.damage = 10
+        self.pickup = pickup                  # you add a pick up method to player because hes the one going pickup
 
     def move(self, new_location):
         """this method moves characters to a new location
@@ -477,6 +481,7 @@ class Player(object):
         :param new_location:  the variable containing a room object
         """
         self.current_location = new_location
+# ======================================================================================================================
 
 
 Long_Axe = LongAxe("LongAxe", 30, "Long", 100, 20)
@@ -500,7 +505,7 @@ c2 = Character("Orc2", 100, Long_Bow, None)
 stool = Stool("stool", 10, 100)
 key = Keys("Key", 1, 1000)
 
-
+# ================================================Rooms=================================================================
 MANSION_DOOR = Room("The ABANDONED MANSION DOOR", "The door seems to be closed and around you can see plants."
                                                   " To the south there is a window. To the west is a statue that"
                                                   " has no head.The door seems to be closed and around you can see"
@@ -562,7 +567,7 @@ ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abando
                                               " It also has a random statue with no head")
 
 #  you open the door with the key,get in.
-
+# =======================================Instantiate items==============================================================
 ABANDONED_MANSION.south = MANSION_DOOR
 MANSION_DOOR.north = ABANDONED_MANSION
 MANSION_DOOR.east = MANSION_WINDOW    # doesnt say this for some reason
@@ -592,17 +597,22 @@ V2MANSION_DOOR.west = COBBLE_STONE_STATUE
 V2MANSION_DOOR.south = INSIDE_MANSION
 INSIDE_MANSION.north = V2MANSION_DOOR
 
-player = Player(ABANDONED_MANSION)
+player = Player(ABANDONED_MANSION, pickup=True)
 playing = True
 directions = ["north", "south", "east", "west", "up", "down"]
 
-# controller
+# ===================================================controller=========================================================
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
 
     if player.current_location.items is not None:
         print("There is a %s here." % player.current_location.items.name)
+
+    # if player.pickup.items.name == True:
+    #      print("do you want to pick up item")
+    # if int(input("yes")):
+    #      player.inventory + player.items
 
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
