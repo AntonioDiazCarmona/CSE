@@ -570,25 +570,25 @@ ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abando
 # =======================================Instantiate items==============================================================
 ABANDONED_MANSION.south = MANSION_DOOR
 MANSION_DOOR.north = ABANDONED_MANSION
-MANSION_DOOR.east = MANSION_WINDOW    # doesnt say this for some reason
-MANSION_WINDOW.west = MANSION_DOOR  # here up is mostly done just need something else
+MANSION_DOOR.east = MANSION_WINDOW
+MANSION_WINDOW.west = MANSION_DOOR
 MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
 EAST_SIDE_OF_MANSION.west = V2MANSION_WINDOW
 V2MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
 V2MANSION_WINDOW.west = MANSION_DOOR
-MANSION_DOOR.west = STATUE  # here where you keep going
+MANSION_DOOR.west = STATUE
 STATUE.east = MANSION_DOOR
 STATUE.south = V1_SIDE_OF_MANSION
 V1_SIDE_OF_MANSION.north = STATUE
 V1_SIDE_OF_MANSION.south = DOWN_SIDE_OF_MANSION
-DOWN_SIDE_OF_MANSION.north = V1_SIDE_OF_MANSION  # 5
+DOWN_SIDE_OF_MANSION.north = V1_SIDE_OF_MANSION
 DOWN_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
 BACKYARD_OF_MANSION.west = DOWN_SIDE_OF_MANSION
 BACKYARD_OF_MANSION.west = V2_SIDE_OF_MANSION
 V2_SIDE_OF_MANSION.east = BACKYARD_OF_MANSION
 V2_SIDE_OF_MANSION.north = UP_SIDE_OF_MANSION
 UP_SIDE_OF_MANSION.south = V2_SIDE_OF_MANSION
-UP_SIDE_OF_MANSION.east = V3_SIDE_OF_MANSION     # here need to fix because direction is wrong
+UP_SIDE_OF_MANSION.east = V3_SIDE_OF_MANSION
 V3_SIDE_OF_MANSION.west = UP_SIDE_OF_MANSION
 V3_SIDE_OF_MANSION.east = COBBLE_STONE_STATUE
 COBBLE_STONE_STATUE.west = V3_SIDE_OF_MANSION
@@ -605,14 +605,17 @@ directions = ["north", "south", "east", "west", "up", "down"]
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+    print()   # trying to add the pick up method
+    # print(player.inventory + player.pickup.items)
 
     if player.current_location.items is not None:
         print("There is a %s here." % player.current_location.items.name)
 
+
     # if player.pickup.items.name == True:
-    #      print("do you want to pick up item")
+    #       print("do you want to pick up item")
     # if int(input("yes")):
-    #      player.inventory + items
+    #       print"you now pick up the", Items
 
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
