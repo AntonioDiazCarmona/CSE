@@ -605,21 +605,33 @@ directions = ["north", "south", "east", "west", "up", "down"]
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
-    print()   # trying to add the pick up method
-    # print(player.inventory + player.pickup.items)
-
+    print()
     if player.current_location.items is not None:
         print("There is a %s here." % player.current_location.items.name)
 
+        items = player.current_location.items.name
+        inventory = []
+        print('there is an item, want to pick it up?')
+    if input == 'PickUp':
+        print("you pick up an item to check what items you have type in BackPack")
+        room_object_that_we_move_to.iventory.append(items)
 
-    # if player.pickup.items.name == True:
-    #       print("do you want to pick up item")
-    # if int(input("yes")):
-    #       print"you now pick up the", Items
+        # inventory.append(items) in room_object_that_we_move_to
+
+        # if player.current_location.items.name == input == 'pick up':
+        #     room_object_that_we_move_to.remove.items.name
+
+
 
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
+    elif command == 'BackPack':
+        print("you have these items in your inventory",player.inventory)
+    elif command == 'PickUp':
+        print("you pick up an item to check what items you have type in BackPack")
+        room_object_that_we_move_to.iventory.append(items)
+
     elif command.lower() in directions:
         try:
             # command ='north'#if their is now location you put none# so this basically tell it if i has a path to north
