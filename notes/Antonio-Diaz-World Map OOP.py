@@ -612,9 +612,10 @@ while playing:
         items = player.current_location.items.name
         inventory = []
         print('there is an item, want to pick it up?')
-    if input == 'PickUp':
-        print("you pick up an item to check what items you have type in BackPack")
-        room_object_that_we_move_to.iventory.append(items)
+
+    # if input == 'PickUp':
+    #     print("you pick up an item to check what items you have type in BackPack")
+    #     room_object_that_we_move_to.iventory.append(items)
 
         # inventory.append(items) in room_object_that_we_move_to
 
@@ -628,9 +629,20 @@ while playing:
         playing = False
     elif command == 'BackPack':
         print("you have these items in your inventory",player.inventory)
-    elif command == 'PickUp':
-        print("you pick up an item to check what items you have type in BackPack")
-        room_object_that_we_move_to.iventory.append(items)
+
+    elif "pick up " in command:
+        items_name = command[8:]
+        items.name = items_name
+        print("you picked up an item to check what items you have type in BackPack")
+        player.inventory.append(player.current_location.items)
+    if player.current_location.items == True:
+        room_object_that_we_move_to.pop(player.current_location.items)
+
+
+
+
+
+
 
     elif command.lower() in directions:
         try:
