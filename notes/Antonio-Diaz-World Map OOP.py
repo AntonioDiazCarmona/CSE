@@ -632,12 +632,15 @@ while playing:
 
     elif "pick up " in command:
         items_name = command[8:]
-        items.name = items_name
-        print("you picked up an item to check what items you have type in BackPack")
-        player.inventory.append(player.current_location.items)
-    if player.current_location.items == True:
-        room_object_that_we_move_to.pop(player.current_location.items)
-
+        if player.current_location.items is not None:
+            if player.current_location.items.name == items_name:
+                print("you picked up an item to check what items you have type in BackPack")
+                player.inventory.append(player.current_location.items)
+                player.current_location.items = None
+            else:
+                print("You don't see one")
+        else:
+            print("There is nothing here")
 
 
 
