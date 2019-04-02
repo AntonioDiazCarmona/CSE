@@ -468,13 +468,13 @@ class Character(object):
 
 
 class Player(object):
-    def __init__(self, starting_location, pickup):
+    def __init__(self, starting_location, pickup, drop):
         self.health = 100
         self.current_location = starting_location
         self.inventory = []
         self.damage = 10
         self.pickup = pickup                  # you add a pick up method to player because hes the one going pickup
-
+        self.drop = drop
     def move(self, new_location):
         """this method moves characters to a new location
 
@@ -597,7 +597,7 @@ V2MANSION_DOOR.west = COBBLE_STONE_STATUE
 V2MANSION_DOOR.south = INSIDE_MANSION
 INSIDE_MANSION.north = V2MANSION_DOOR
 
-player = Player(ABANDONED_MANSION, pickup=True)
+player = Player(ABANDONED_MANSION, pickup=True, drop=True)
 playing = True
 directions = ["north", "south", "east", "west", "up", "down"]
 
@@ -613,22 +613,14 @@ while playing:
         inventory = []
         print('there is an item, want to pick it up?')
 
-    # if input == 'PickUp':
-    #     print("you pick up an item to check what items you have type in BackPack")
-    #     room_object_that_we_move_to.iventory.append(items)
-
-        # inventory.append(items) in room_object_that_we_move_to
-
-        # if player.current_location.items.name == input == 'pick up':
-        #     room_object_that_we_move_to.remove.items.name
-
-
-
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command == 'BackPack':
         print("you have these items in your inventory",player.inventory)
+
+
+
 
     elif "pick up " in command:
         items_name = command[8:]
@@ -643,9 +635,14 @@ while playing:
             print("There is nothing here")
 
 
-
-
-
+    elif "drop " in command:
+        items_name = command[5:]
+    if player.inventory.items is not None:
+        if player.inventory.items.name == items_name:
+            print("You dropped an item")
+            player.inventory.remove(items)
+        else:
+            print("I don't think you have items in your BackPack")
 
     elif command.lower() in directions:
         try:
