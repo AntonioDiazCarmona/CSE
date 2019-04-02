@@ -475,6 +475,7 @@ class Player(object):
         self.damage = 10
         self.pickup = pickup                  # you add a pick up method to player because hes the one going pickup
         self.drop = drop
+
     def move(self, new_location):
         """this method moves characters to a new location
 
@@ -619,9 +620,6 @@ while playing:
     elif command == 'BackPack':
         print("you have these items in your inventory",player.inventory)
 
-
-
-
     elif "pick up " in command:
         items_name = command[8:]
         if player.current_location.items is not None:
@@ -633,7 +631,6 @@ while playing:
                 print("You don't see one")
         else:
             print("There is nothing here")
-
 
     elif "drop " in command:
         items_name = command[5:]
