@@ -618,7 +618,7 @@ while playing:
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command == 'BackPack':
-        print("you have these items in your inventory",player.inventory)
+        print("you have these items in your inventory", player.inventory)
 
     elif "pick up " in command:
         items_name = command[8:]
@@ -634,12 +634,16 @@ while playing:
 
     elif "drop " in command:
         items_name = command[5:]
-    if player.inventory.items is not None:
-        if player.inventory.items.name == items_name:
-            print("You dropped an item")
-            player.inventory.remove(items)
-        else:
-            print("I don't think you have items in your BackPack")
+        if player.inventory.name is not None:
+            if player.inventory.items.name == items_name:
+                print("You dropped an item")
+                player.inventory.pop(items)
+            else:
+                print("I don't think you have items in your BackPack ")
+
+
+
+
 
     elif command.lower() in directions:
         try:
