@@ -520,9 +520,9 @@ EAST_SIDE_OF_MANSION = Room("EAST SIDE OF MANSION", "The east side of the mansio
 V2MANSION_WINDOW = Room("EAST SIDE WINDOW OF MANSION", "You are back to the window that seems to be a mirror")
 
 STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head "
-                                    "You can see a metal piece on top of the statue with there is no head"
-                                    "the statue is to high you will need something to climb on the statue and"
-                                    "get the metal piece,to the south is the west side of the mansion.", None, None,
+                                    " You can see a metal piece on top of the statue with there is no head"
+                                    " the statue is to high you will need something to climb on the statue and"
+                                    " get the metal piece,to the south is the west side of the mansion.", None, None,
               None, None, None, None, key)
 
 V1_SIDE_OF_MANSION = Room("West side of mansion", "You are looking down the south side of mansion which leads"
@@ -614,6 +614,8 @@ while playing:
         inventory = []
         print('there is an item, want to pick it up?')
 
+
+
     command = input(">_")
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
@@ -634,12 +636,24 @@ while playing:
 
     elif "drop " in command:
         items_name = command[5:]
-        if player.inventory.name is not None:
+        if player.inventory.items.name is not None:
             if player.inventory.items.name == items_name:
                 print("You dropped an item")
-                player.inventory.pop(items)
+                player.inventory.pop(items_name)
+
+
             else:
                 print("I don't think you have items in your BackPack ")
+
+
+    elif command == "Drop":
+         print("which item do you want to drop?")
+         player.remove(items_name)
+
+    # if player.inventory.items is not None:
+    #     print("you have items in your BackPack" % player.inventory.items.name)
+    #     items = player.inventory.items.name
+
 
 
 
@@ -665,3 +679,10 @@ while playing:
     else:
         print("Command Not Recognized")
     print()
+
+item_object = None
+        for items in player.inventory:
+            if items.name == items_name:
+                item_object = items
+
+        if item_object

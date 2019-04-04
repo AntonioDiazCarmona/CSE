@@ -970,33 +970,19 @@ class Player(object):
 
 
     def dropItem():
-
         print("Which item would you like to drop:")
-
         i = 1
-
-        for item in self.inventory:
-
+        for item in player.inventory:
             print( i +"): ", item)
-
             i += 1
-
         item_to_drop = input(">_ ")
-
         while not ( 0 < item_to_drop < i):
-
             print("Wrong input, try again")
-
             item_to_drop = input(">_ ")
-
-            # Remove selected item from inventory
-
-        item_to_drop -= 1   # To coorelate with inventory index
-
-        item_dropped = self.inventory.pop(item_to_drop)
-
+         # Remove selected item from inventory
+        item_to_drop -= 1                                               # To coorelate with inventory index
+        item_dropped = player.inventory.pop(item_to_drop)
         print(item_dropped, "has been dropped!")
-
         return item_dropped
 
     # ======================================================================================================================
@@ -1285,6 +1271,7 @@ while playing:
 
 
 
+
     elif command == 'PickUp':
 
         print("you pick up an item to check what items you have type in BackPack")
@@ -1295,11 +1282,11 @@ while playing:
 
 
 
-        # elif command =="Drop"
-
-        #     print("which item do you want to drop?")
-
-        #     player.remove
+         # elif command =="Drop"
+         #
+         #     print("which item do you want to drop?")
+         #
+         #     player.remove
 
 
 
