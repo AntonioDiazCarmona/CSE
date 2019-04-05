@@ -636,23 +636,20 @@ while playing:
 
     elif "drop " in command:
         items_name = command[5:]
-        if player.inventory.items.name is not None:
-            if player.inventory.items.name == items_name:
-                print("You dropped an item")
-                player.inventory.pop(items_name)
+
+    item_object = None
+
+        for items in player.current_location.items:
+            if items.name == items_name:
+                item_object = items
+
+    if item_object is not None:
+        player.inventory.remove(item_object)
+        player.current_location.append(item_object)
 
 
-            else:
-                print("I don't think you have items in your BackPack ")
 
 
-    elif command == "Drop":
-         print("which item do you want to drop?")
-         player.remove(items_name)
-
-    # if player.inventory.items is not None:
-    #     print("you have items in your BackPack" % player.inventory.items.name)
-    #     items = player.inventory.items.name
 
 
 
@@ -680,9 +677,4 @@ while playing:
         print("Command Not Recognized")
     print()
 
-item_object = None
-        for items in player.inventory:
-            if items.name == items_name:
-                item_object = items
 
-        if item_object
