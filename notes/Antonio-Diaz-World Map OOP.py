@@ -8,6 +8,8 @@ else:
 class LockException(Exception):
     pass
 
+class ToHigh(Exception):
+    pass
 
 class Room(object):
     def __init__(self, name, description="", north=None, south=None, east=None, west=None, up=None, down=None,
@@ -601,7 +603,7 @@ INSIDE_MANSION.north = V2MANSION_DOOR
 player = Player(ABANDONED_MANSION, pickup=True, drop=True)
 playing = True
 directions = ["north", "south", "east", "west", "up", "down"]
-
+short_directions = ['n', 's', 'e', 'w', 'u', 'd']
 # ===================================================controller=========================================================
 while playing:
     print(player.current_location.name)
@@ -617,6 +619,9 @@ while playing:
 
 
     command = input(">_")
+    if command.lower() in short_directions:
+        pos = short_directions.index(command.lower())
+        command = directions[pos]
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
     elif command == 'BackPack':
@@ -636,19 +641,18 @@ while playing:
 
     elif "drop " in command:
         items_name = command[5:]
+        item_object = None
 
-    item_object = None
-
-        for items in player.current_location.items:
+        for items in player.inventory:
             if items.name == items_name:
                 item_object = items
 
-    if item_object is not None:
-        player.inventory.remove(item_object)
-        player.current_location.append(item_object)
-
-
-
+        if item_object is not None and player.current_location.items is None:
+            player.inventory.remove(item_object)
+            player.current_location.items = item_object
+            print("You dropped an item")
+        elif player.current_location.items is not None:
+            print("There is already an item here. You can't drop anything.")
 
 
 
@@ -663,6 +667,9 @@ while playing:
             if player.current_location == MANSION_DOOR and command.lower() in ["south", 's']:
                 if key not in player.inventory:
                     raise LockException
+            if player.current_location == STATUE and command.lower() in ["pick up "]
+                if Stool not in player.inventory:
+                    raise ToHigh
 
             if room_object_that_we_move_to is None:
                 raise AttributeError
