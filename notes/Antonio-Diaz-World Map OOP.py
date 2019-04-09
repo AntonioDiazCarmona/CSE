@@ -558,8 +558,8 @@ COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE", "You are at the cobblesto
 # you find the key...
 
 V2MANSION_DOOR = Room("FRONT MANSION DOOR", "Your are back again to front mansion now try to open with"
-                                            " the key you got from the "             
-                                            "top of the cobbles stone statue with not head")  # you get the key
+                                            " the key you got from the top of the cobbles stone"
+                                            " statue with not head, by going south")  # you get the key
 
 INSIDE_MANSION = Room("INSIDE OF MANSION", "Their seems to be a lot of rooms here.Their are two stair leading up to "
                                            "the second floor which where you can see more rooms.Their is also a"
