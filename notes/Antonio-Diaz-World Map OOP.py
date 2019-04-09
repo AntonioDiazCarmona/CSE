@@ -8,8 +8,10 @@ else:
 class LockException(Exception):
     pass
 
+
 class ToHigh(Exception):
     pass
+
 
 class Room(object):
     def __init__(self, name, description="", north=None, south=None, east=None, west=None, up=None, down=None,
@@ -551,7 +553,8 @@ COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE", "You are at the cobblesto
                                                        " is the top of the cobblestone statue with no head"
                                                        " by placing the stool that you collected from the"
                                                        " backyard and try climbing it to see what was"
-                                                       " at the top of the no head statue")
+                                                       " at the top of the no head statue",
+                           None, None, None, None, None, None, key)
 # you find the key...
 
 V2MANSION_DOOR = Room("FRONT MANSION DOOR", "Your are back again to front mansion now try to open with"
@@ -616,8 +619,6 @@ while playing:
         inventory = []
         print('there is an item, want to pick it up?')
 
-
-
     command = input(">_")
     if command.lower() in short_directions:
         pos = short_directions.index(command.lower())
@@ -626,6 +627,12 @@ while playing:
         playing = False
     elif command == 'BackPack':
         print("you have these items in your inventory", player.inventory)
+
+    elif player.current_location == STATUE and  "pick up " in command.lower() and Stool not in player.inventory:
+        print("The item is to high to pick up.")
+
+    elif player.current_location == COBBLE_STONE_STATUE and "pick up " in command.lower() and stool not in player.inventory:
+        print("the item is to high you should picked up the stool in the back yard.")
 
     elif "pick up " in command:
         items_name = command[8:]
@@ -654,12 +661,6 @@ while playing:
         elif player.current_location.items is not None:
             print("There is already an item here. You can't drop anything.")
 
-
-
-
-
-
-
     elif command.lower() in directions:
         try:
             # command ='north'#if their is now location you put none# so this basically tell it if i has a path to north
@@ -667,9 +668,7 @@ while playing:
             if player.current_location == MANSION_DOOR and command.lower() in ["south", 's']:
                 if key not in player.inventory:
                     raise LockException
-            if player.current_location == STATUE and command.lower() in ["pick up "]
-                if Stool not in player.inventory:
-                    raise ToHigh
+
 
             if room_object_that_we_move_to is None:
                 raise AttributeError
@@ -683,5 +682,3 @@ while playing:
     else:
         print("Command Not Recognized")
     print()
-
-
