@@ -587,7 +587,7 @@ up_east_stairs = Room("you went up the east stairs to the east is a room with a 
                       " to the west their is door and it seems to have a key in the door to the south its just blocked"
                       " off by a random piano that looks very clean and looks like it has a key mold.")
 
-# up_stairs_east()
+up_stairs_east()
 
 
 ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from"
