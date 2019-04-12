@@ -951,6 +951,10 @@ class Player(object):
 
 
 
+
+
+
+
     def move(self, new_location):
 
         """this method moves characters to a new location

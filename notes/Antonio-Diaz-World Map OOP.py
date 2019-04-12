@@ -567,23 +567,23 @@ INSIDE_MANSION = Room("INSIDE OF MANSION", "Their seems to be a lot of rooms her
 
 Stairs = Room("Stairs", "You are at the stairs.To go up the stairs you would need to go south")
 
-Up_stairs = Room("you are going up the stairs soon you are going to choose which stairs you want to go on "
-                "the one with the doll that looks like the stairs are brand new or the one that looks very old"
-                " and looks likes its going to break as soon at you step on one.")
+Up_stairs = Room("Going up Stairs", "you are going up the stairs soon you are going to choose which stairs you want to go on "
+                 "the one with the doll that looks like the stairs are brand new or the one that looks very old"
+                 " and looks likes its going to break as soon at you step on one.")
 # i need to add the name likes stairs and then i pud the description of the room so it can show what the room is called
-west_stairs = Room("Thats kind of weird why would you pick the stairs that look likes they are going to break i mean"
+west_stairs = Room("West stairs", "Thats kind of weird why would you pick the stairs that look likes they are going to break i mean"
                    " i guess just go south if you want to go up the stairs")
 
-up_west_stairs = Room("You are going up the west stairs keep going up by going south ")
+up_west_stairs = Room("Up West Stairs", "You are going up the west stairs keep going up by going south ")
 
-fell_off_the_west = Room("Boom you fell off I warned you don't go on these stairs but in the bright side you seem to be"
+fell_off_the_west = Room("Fell off west stairs", "Boom you fell off I warned you don't go on these stairs but in the bright side you seem to be"
                          "inside the stairs and you cant get out.However in the bright side you found a secret room"
                          " their seems to be alot of things here maybe you can find something that can help you get out"
                          "or even lead somewhere else")
-#  AT THE TOP YOU CAN STILL ADD ALOT OF STUFF
-east_stairs = Room("Wow you pick the stairs with the doll on top of one steps of the stairs ")
+#  AT THE TOP YOU CAN STILL ADD A LOT OF STUFF
+east_stairs = Room("East Stairs", "Wow you pick the stairs with the doll on top of one steps of the stairs ")
 
-up_east_stairs = Room("you went up the east stairs to the east is a room with a broken door you can see alot of items"
+up_east_stairs = Room("Up East Stairs", "you went up the east stairs to the east is a room with a broken door you can see a lot of items"
                       " to the west their is door and it seems to have a key in the door to the south its just blocked"
                       " off by a random piano that looks very clean and looks like it has a key mold.")
 
@@ -653,10 +653,11 @@ while playing:
     elif command == 'BackPack':
         print("you have these items in your inventory", player.inventory)
 
-    elif player.current_location == STATUE and  "pick up " in command.lower() and Stool not in player.inventory:
+    elif player.current_location == STATUE and "pick up " in command.lower() and Stool not in player.inventory:
         print("The item is to high to pick up.")
 
-    elif player.current_location == COBBLE_STONE_STATUE and "pick up " in command.lower() and stool not in player.inventory:
+    elif player.current_location == COBBLE_STONE_STATUE and "pick up " in command.lower()\
+            and stool not in player.inventory:
         print("the item is to high you should picked up the stool in the back yard.")
 
     elif "pick up " in command:
@@ -693,7 +694,6 @@ while playing:
             if player.current_location == MANSION_DOOR and command.lower() in ["south", 's']:
                 if key not in player.inventory:
                     raise LockException
-
 
             if room_object_that_we_move_to is None:
                 raise AttributeError
