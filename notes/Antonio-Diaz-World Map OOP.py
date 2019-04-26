@@ -467,8 +467,8 @@ class Character(object):
         print("%s has %d health left" % (self.name, self.health))
 
     def attack(self, target):
-            print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
-            target.take_damage(self.weapon.damage)
+        print("%s attacks %s for %d damage" % (self.name, target.name, self.weapon.damage))
+        target.take_damage(self.weapon.damage)
 
 
 class Player(object):
