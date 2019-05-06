@@ -561,16 +561,28 @@ V2MANSION_DOOR = Room("FRONT MANSION DOOR", "Your are back again to front mansio
                                             " statue with not head, by going south.")  # you get the key
 
 INSIDE_MANSION = Room("INSIDE OF MANSION", "Their seems to be a lot of rooms inside the mansion.The first floor of the"
-                                           " mansion has two rooms one to the the west and one to the east. Their are "
-                                           " two stair leading up to the second floor which where you can see more"
-                                           " rooms. Their is also a random doll sitting on the stairs.")
+                                           " mansion has two rooms one to the the west and one to the east. to the "
+                                           " south  their are two stair leading up to the second floor which where you"
+                                           " can see more rooms. Their is also a random doll sitting on one of "
+                                           " the stairs.")
 
 First_floor_of_mansion_west = Room("West room first floor", "You are at the west room of the first floor to try to open"
-                                                            "the door of the room go west")
+                                                            " the door of the room go west")
 First_floor_of_mansion_west_locked = Room("The door is locked", "You tried opening the door but the door is locked."
-                                                                "and I don't think you can open it because it has a"
-                                                                "handle but no key mold to open it.Which means the door"
-                                                                "was locked from the inside.")
+                                                                " And I don't think you can open it because it has a"
+                                                                "handle on the door but no key mold to open it."
+                                                                " Which means the door"
+                                                                " was locked from the inside.")
+
+First_floor_of_mansion_east = Room("East room first floor", " You are at the east room try to open the room by going"
+                                                            " east")
+
+First_floor_of_mansion_east_blocked = Room("The door is blocked", "The door wasn't locked and you opened it however"
+                                                                  "when you opened the door behind it was a concrete"
+                                                                  " wall blocking the entrance to the inside of the"
+                                                                  " room.So basically you cant go in unless you get a "
+                                                                  " hammer which who would keep a  sledge hammer in a"
+                                                                  " mansion")
 
 Stairs = Room("Stairs", "You are at the stairs.To go up the stairs you would need to go south")
 
@@ -655,7 +667,15 @@ COBBLE_STONE_STATUE.east = V2MANSION_DOOR
 V2MANSION_DOOR.west = COBBLE_STONE_STATUE
 V2MANSION_DOOR.south = INSIDE_MANSION
 INSIDE_MANSION.north = V2MANSION_DOOR
-INSIDE_MANSION.south = Stairs
+INSIDE_MANSION.west = First_floor_of_mansion_west   # first floor rooms
+First_floor_of_mansion_west.east = INSIDE_MANSION
+First_floor_of_mansion_west.west = First_floor_of_mansion_west_locked
+First_floor_of_mansion_west_locked.east = First_floor_of_mansion_west
+INSIDE_MANSION.east = First_floor_of_mansion_east
+First_floor_of_mansion_east.west = INSIDE_MANSION
+First_floor_of_mansion_east.east = First_floor_of_mansion_east_blocked
+First_floor_of_mansion_east_blocked.west = First_floor_of_mansion_east
+INSIDE_MANSION.south = Stairs   # this is the stairs and going to the second floor
 Stairs.north = INSIDE_MANSION
 Stairs.south = Up_stairs
 Up_stairs.north = Stairs
@@ -685,7 +705,11 @@ east_stairs.west = Up_stairs
 east_stairs.south = up_east_stairs
 up_east_stairs.north = east_stairs
 up_east_stairs.east = up_stairs_east
+up_stairs_east.west = up_east_stairs
+up_east_stairs.west = up_stairs_west
+up_stairs_west.east = up_east_stairs
 up_east_stairs.south = up_stairs_south
+up_stairs_south.north = up_east_stairs
 
 player = Player(ABANDONED_MANSION, pickup=True, drop=True)
 playing = True
