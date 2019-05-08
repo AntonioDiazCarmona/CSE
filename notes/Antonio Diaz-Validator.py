@@ -39,7 +39,7 @@ def validate(num: str):
         # so these are the 'odd' digits
         # and we just do the formula on them
         if i % 2 == 0:
-            # the i is basically the interger and == 0 is basically saying its odd because it starts at index 0
+            # the i is basically the integer and == 0 is basically saying its odd because it starts at index 0
             # this is odd number
             number_list[i] *= 2
             # multiply by 2
