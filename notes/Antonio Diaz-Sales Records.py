@@ -11,6 +11,11 @@ with open("Sales Records.csv", 'r') as old_csv:
     Office_Supplies_profit = 0
     Cosmetics_profit = 0
     Snacks_profit = 0
+    Personal_care_profit = 0
+    Household_profit = 0
+    Vegetables_profit = 0
+    Baby_Food_profit = 0
+    Cereal_profit = 0
     for row in reader:
         if row[0] == 'Region':
             continue
@@ -41,6 +46,17 @@ with open("Sales Records.csv", 'r') as old_csv:
             Cosmetics_profit += Total_profit
         if "Snacks" == Item_selling:
             Snacks_profit += Total_profit
+        if "Personal Care" == Item_selling:
+            Snacks_profit += Total_profit
+        if "Household" == Item_selling:
+            Snacks_profit += Total_profit
+        if "Vegetables" == Item_selling:
+            Snacks_profit += Total_profit
+        if "Baby Food" == Item_selling:
+            Snacks_profit += Total_profit
+        if "Cereal" == Item_selling:
+            Snacks_profit += Total_profit
+
     print("Your total fruit profit added is", round(fruit_profit, 2))
     print("Your total clothes profit added is", round(clothes_profit, 2))
     print("Your total meat profit added is", round(meat_profit, 2))
@@ -48,3 +64,8 @@ with open("Sales Records.csv", 'r') as old_csv:
     print("Your total Office Supplies profit added is", round(Office_Supplies_profit, 2))
     print("Your total Cosmetics profit added is", round(Cosmetics_profit, 2))
     print("Your total Snacks profit added is", round(Snacks_profit, 2))
+    print("your total personal care profit added is", round(Personal_care_profit, 2))  # here
+    print("your total household profit added is", round(Household_profit, 2))
+    print("Your total vegetables profit added is ", round(Vegetables_profit, 2))
+    print("Your total baby food profit added is ", round(Baby_Food_profit, 2))
+    print("Your total cereal profit added is ", round(Cereal_profit))

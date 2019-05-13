@@ -15,7 +15,7 @@ class ToHigh(Exception):
 
 class Room(object):
     def __init__(self, name, description="", north=None, south=None, east=None, west=None, up=None, down=None,
-                 items=None):
+                 items_in_room=None):
         self.name = name
         self.north = north
         self.south = south
@@ -24,7 +24,7 @@ class Room(object):
         self.west = west
         self.up = up
         self.down = down
-        self.items = items
+        self.items = items_in_room
 
 # ======================================================================================================================
 
