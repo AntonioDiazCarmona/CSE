@@ -28,11 +28,6 @@ with open("Sales Records.csv", 'r') as old_csv:
         # print("Your total revenue is", Total_revenue)
         # print("Your total cost for all the items you bought is", Total_cost)
         if "Fruits" == Item_selling:
-            # print("You are selling", Item_selling)
-            # print("You total cost for buying fruits is", Total_cost)
-            # print("your total revenue is ", Total_revenue)
-            # print("You made a profit of", Total_profit)
-
             fruit_profit += Total_profit
         if "Clothes" == Item_selling:
             clothes_profit += Total_profit
@@ -47,15 +42,15 @@ with open("Sales Records.csv", 'r') as old_csv:
         if "Snacks" == Item_selling:
             Snacks_profit += Total_profit
         if "Personal Care" == Item_selling:
-            Snacks_profit += Total_profit
+            Personal_care_profit += Total_profit
         if "Household" == Item_selling:
-            Snacks_profit += Total_profit
+            Household_profit += Total_profit
         if "Vegetables" == Item_selling:
-            Snacks_profit += Total_profit
+            Vegetables_profit += Total_profit
         if "Baby Food" == Item_selling:
-            Snacks_profit += Total_profit
+            Baby_Food_profit += Total_profit
         if "Cereal" == Item_selling:
-            Snacks_profit += Total_profit
+            Cereal_profit += Total_profit
 
     print("Your total fruit profit added is", round(fruit_profit, 2))
     print("Your total clothes profit added is", round(clothes_profit, 2))
@@ -69,3 +64,9 @@ with open("Sales Records.csv", 'r') as old_csv:
     print("Your total vegetables profit added is ", round(Vegetables_profit, 2))
     print("Your total baby food profit added is ", round(Baby_Food_profit, 2))
     print("Your total cereal profit added is ", round(Cereal_profit))
+
+Profit_list = [fruit_profit, clothes_profit, meat_profit, Beverages_profit, Office_Supplies_profit, Cosmetics_profit,
+               Snacks_profit, Personal_care_profit, Household_profit, Vegetables_profit, Baby_Food_profit,
+               Cereal_profit]
+if max(Profit_list) =
+print("you got the most money from cosmetics by ", max(Profit_list))
