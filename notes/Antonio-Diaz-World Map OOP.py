@@ -578,7 +578,7 @@ First_floor_of_mansion_east = Room("East room first floor", " You are at the eas
                                                             " east")
 
 First_floor_of_mansion_east_blocked = Room("The door is blocked", "The door wasn't locked and you opened it however"
-                                                                  "when you opened the door behind it was a concrete"
+                                                                  " when you opened the door behind it was a concrete"
                                                                   " wall blocking the entrance to the inside of the"
                                                                   " room.So basically you cant go in unless you get a "
                                                                   " hammer which who would keep a  sledge hammer in a"
