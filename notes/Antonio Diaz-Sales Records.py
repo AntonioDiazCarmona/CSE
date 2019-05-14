@@ -23,10 +23,6 @@ with open("Sales Records.csv", 'r') as old_csv:
         Total_cost = row[12]  # string
         Total_revenue = row[11]
         Item_selling = row[2]
-        # print("you are selling", Item_selling)
-        # print("Your total profit is", Total_profit)
-        # print("Your total revenue is", Total_revenue)
-        # print("Your total cost for all the items you bought is", Total_cost)
         if "Fruits" == Item_selling:
             fruit_profit += Total_profit
         if "Clothes" == Item_selling:
@@ -68,5 +64,9 @@ with open("Sales Records.csv", 'r') as old_csv:
 Profit_list = [fruit_profit, clothes_profit, meat_profit, Beverages_profit, Office_Supplies_profit, Cosmetics_profit,
                Snacks_profit, Personal_care_profit, Household_profit, Vegetables_profit, Baby_Food_profit,
                Cereal_profit]
-if max(Profit_list) =
-print("you got the most money from cosmetics by ", max(Profit_list))
+item_list = ["Fruits", "Clothes", "Meat", "Beverages", "Office_supplies", "Cosmetics", "Snacks", "Personal Care",
+             "Household profit", "Vegetables", "Baby Food"]
+index_of_highest_profit = Profit_list.index(max(Profit_list))
+print("you got the most money from", item_list[index_of_highest_profit], "at a profit of", max(Profit_list))
+
+
