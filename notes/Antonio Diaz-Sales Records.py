@@ -68,5 +68,3 @@ item_list = ["Fruits", "Clothes", "Meat", "Beverages", "Office_supplies", "Cosme
              "Household profit", "Vegetables", "Baby Food"]
 index_of_highest_profit = Profit_list.index(max(Profit_list))
 print("you got the most money from", item_list[index_of_highest_profit], "at a profit of", max(Profit_list))
-
-
