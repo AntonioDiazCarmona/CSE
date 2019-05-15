@@ -597,22 +597,26 @@ west_stairs = Room("west stairs", "Thats kind of weird why would you pick the st
 
 up_west_stairs = Room("Up west stairs", "You are going up the west stairs keep going up by going south ")
 
-fell_off_the_west_stairs = Room("fell off", "Boom you fell off I warned you don't go on these stairs but in the bright"
-                                " side you seem to be inside the stairs and you cant get out."
-                                "However in the bright side you found"
+fell_off_the_west_stairs = Room("Fell off", "Boom you fell off I warned you don't go on these stairs but you went "
+                                "anyway and now you are stuck because you seem to be inside the stairs and "
+                                " you cant get out.However in the bright side you found"
                                 " a secret room. Their seems to be a lot of things here maybe you can find something"
                                 " that can help you get out or even lead some where else")
 
 North_inside_west_stairs = Room("north", "To the north you see nothing.")
 
-West_inside_west_stairs = Room("west", "To the west you can see a sword you might want to pick it you might need"
-                                       " it for something")  # add a sword here
+West_inside_west_stairs = Room("west", "To the west you can see a  shield  you might want to pick it you might need"
+                                       " it for something", None, None, None, None, None, None, Arm_shield)
 
 East_inside_west_stairs = Room("east", "To the east you don't really see nothing besides a giant picture frame on the"
                                        " wall.")
 
 South_inside_west_stairs = Room("south", "To the south their is a random book with the title being help you might"
-                                         " probably want to read it, maybe it can give you a clue of how to get out")
+                                         " probably want to read it, maybe it can give you a clue of how to get out"
+                                         "to open the book go south")
+Reading_The_Book = Room("Reading Book", "Hello  this is the first day in the mansion I checked all the rooms "
+                                        "and I found nothing for the longest time since I entered the mansion i felt"
+                                        "  a precence of someone following every where ")
 
 east_stairs = Room("East stairs", "Wow you pick the stairs with the doll on top of one steps of the stairs ")
 
@@ -642,6 +646,7 @@ ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abando
 ABANDONED_MANSION.south = MANSION_DOOR
 MANSION_DOOR.north = ABANDONED_MANSION
 MANSION_DOOR.east = MANSION_WINDOW
+MANSION_DOOR.south = INSIDE_MANSION
 MANSION_WINDOW.west = MANSION_DOOR
 MANSION_WINDOW.east = EAST_SIDE_OF_MANSION
 EAST_SIDE_OF_MANSION.west = V2MANSION_WINDOW
@@ -664,6 +669,7 @@ V3_SIDE_OF_MANSION.west = UP_SIDE_OF_MANSION
 V3_SIDE_OF_MANSION.east = COBBLE_STONE_STATUE
 COBBLE_STONE_STATUE.west = V3_SIDE_OF_MANSION
 COBBLE_STONE_STATUE.east = V2MANSION_DOOR
+V2MANSION_DOOR.east = MANSION_WINDOW
 V2MANSION_DOOR.west = COBBLE_STONE_STATUE
 V2MANSION_DOOR.south = INSIDE_MANSION
 INSIDE_MANSION.north = V2MANSION_DOOR
