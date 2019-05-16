@@ -592,7 +592,7 @@ Up_stairs = Room("Up stairs", "You are going up the stairs soon you are going to
                               " and looks likes its going to break as soon at you step on one which is to the west.")
 
 # i need to add the name likes stairs and then i pud the description of the room so it can show what the room is called
-west_stairs = Room("west stairs", "Thats kind of weird why would you pick the stairs that look likes they are going"
+west_stairs = Room("west stairs", "That's kind of weird why would you pick the stairs that look likes they are going"
                                   " to break I guess just go south if you want to go up the stairs.")
 
 up_west_stairs = Room("Up west stairs", "You are going up the west stairs keep going up by going south ")
@@ -615,8 +615,22 @@ South_inside_west_stairs = Room("south", "To the south their is a random book wi
                                          " probably want to read it, maybe it can give you a clue of how to get out"
                                          "to open the book go south")
 Reading_The_Book = Room("Reading Book", "Hello  this is the first day in the mansion I checked all the rooms "
-                                        "and I found nothing for the longest time since I entered the mansion i felt"
-                                        "  a precence of someone following every where ")
+                                        "and I found nothing for the longest time since I entered the mansion I felt"
+                                        "  a presence of someone following  me every where or was it my imagination"
+                                        " The second day I  was trying to go back outside the mansion but the mansion"
+                                        " door was locked and so I decided to  explore  a little more, so I went to the"
+                                        " second floor of the mansion and while i was going their was two path one with"
+                                        " a random doll on the stairs and the other with very old stairs going up."
+                                        " I was going to choose the stairs with the doll but I felt very weird when I"
+                                        " look at the random doll so I decided to take a risk and go with the very old"
+                                        " stairs. I went up the stairs but while going up the stairs one of the stairs"
+                                        " and I fell down the stairs.Now I was inside the stairs and couldn't get out "
+                                        " even though I tried everything.The third day went by and I was still in the"
+                                        " mansion and while being stuck in the stairs it made me realize of something"
+                                        " similar I captured in my dream when I was in a cave and suddenly....The book"
+                                        " seems to stop right here and on every page after that it says HELP!!!, This"
+                                        " did not give you any information of how to get out however if the person who "
+                                        " wrote this is not here their must be a way to get out of here. ")
 
 east_stairs = Room("East stairs", "Wow you pick the stairs with the doll on top of one steps of the stairs ")
 
