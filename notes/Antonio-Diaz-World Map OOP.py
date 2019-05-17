@@ -511,48 +511,49 @@ stool = Stool("stool", 10, 100)
 key = Keys("key", 1, 1000)
 
 # ================================================Rooms=================================================================
-MANSION_DOOR = Room("The Abandoned Mansion Door", "The door seems to be closed and around you can see plants."
-                                                  " To the south there is a window. To the west is a statue that"
-                                                  " has no head. ")
+MANSION_DOOR = Room("The Abandoned Mansion Door", "The door seems to be closed and around you can see plants.\n"
+                                                  "To the south there is a window. To the west is a statue that\n"
+                                                  "has no head. ")
 MANSION_WINDOW = Room("East Side Window", "The window seems to be a mirror. ")
 
-EAST_SIDE_OF_MANSION = Room("East Side Of Mansion", "The east side of the mansion seems to be blocked off by a giant"
-                                                    " tree. There is also a short sword leaning on the tree"
-                                                    " it look very very old.", None, None, None,
+EAST_SIDE_OF_MANSION = Room("East Side Of Mansion", "The east side of the mansion seems to be blocked off by a giant\n"
+                                                    "tree. There is also a short sword leaning on the tree\n"
+                                                    "it looks very very old.", None, None, None,
                             None, None, None, Short_Sword)
 V2MANSION_WINDOW = Room(" East Side Window of Mansion", "You are back to the window that seems to be a mirror.")
 
-STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head. "
-                                    " You can see a metal piece on top of the statue with there is no head"
-                                    " the statue is to high you will need something to climb on the statue and"
-                                    " get the metal piece.To the south is the west side of the mansion.", None, None,
+STATUE = Room("Cobblestone statue", "What your looking at is a cobble stone statue of a man with no head.\n "
+                                    "You can see a metal piece on top of the statue where there is no head\n"
+                                    "the statue is to high you will need something to climb on the statue and\n"
+                                    "get the metal piece.To the south is the west side of the mansion.", None, None,
               None, None, None, None, key)
 
 V1_SIDE_OF_MANSION = Room("West side of mansion", "You are looking down the south side of mansion which leads"
                                                   " to the backyard.")
 
-DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You walked down the south side of mansion, to the "
-                                                          "east is the backyard of mansion")
+DOWN_SIDE_OF_MANSION = Room("Down south side of mansion", "You walked down the south side of mansion,"
+                                                          " to the east is the backyard of mansion\n")
 
-BACKYARD_OF_MANSION = Room("East Backyard", "You are at the back yard and their seems to be a lot of items at"
-                                            " the backyard like a slide a stool and a lot of tables for some reason.",
+BACKYARD_OF_MANSION = Room("East Backyard", "You are at the back yard and their seems to be a lot of items at\n"
+                                            "the backyard like a slide a stool and a lot of tables for some reason.",
                            None, None, None, None, None, None, stool)
 
-V2_SIDE_OF_MANSION = Room("West Side of Mansion", "You are looking at the side of the mansion you came from, to go"
-                                                  " back up go to the north")
+V2_SIDE_OF_MANSION = Room("West Side of Mansion", "You are looking at the side of the mansion you came from\n"
+                                                  "to go back up go to the north")
 
 UP_SIDE_OF_MANSION = Room("Up North, West Side Of Mansion ", "You walked up the north side of mansion which was the way"
-                                                             " you walked in the begining to go to the back yard."
-                                                             " To the east is the west side of mansion.")
+                                                             "\n"
+                                                             "you walked in the beginning to go to the back yard.\n"
+                                                             "To the east is the west side of mansion.")
 
-V3_SIDE_OF_MANSION = Room("West side of mansion", "You are at the west side of mansion to the east is"
-                                                  " the cobblestone statue from before.")
+V3_SIDE_OF_MANSION = Room("West side of mansion", "You are at the west side of mansion to the east is\n"
+                                                  "the cobblestone statue from before.")
 
-COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE", "You are at the cobblestone statue now try to see what"
-                                                       " is the top of the cobblestone statue with no head"
-                                                       " by placing the stool that you collected from the"
-                                                       " backyard and try climbing it to see what was"
-                                                       " at the top of the no head statue.",
+COBBLE_STONE_STATUE = Room("WEST COBBLE STONE STATUE", "You are at the cobblestone statue now try to see what\n"
+                                                       "is the top of the cobblestone statue with no head\n"
+                                                       "by placing the stool that you collected from the\n"
+                                                       "backyard and try climbing it to see what was\n"
+                                                       "at the top of the no head statue.",
                            None, None, None, None, None, None, key)
 # you find the key...
 
@@ -614,6 +615,7 @@ East_inside_west_stairs = Room("east", "To the east you don't really see nothing
 South_inside_west_stairs = Room("south", "To the south their is a random book with the title being help you might"
                                          " probably want to read it, maybe it can give you a clue of how to get out"
                                          "to open the book go south")
+
 Reading_The_Book = Room("Reading Book", "Hello  this is the first day in the mansion I checked all the rooms "
                                         "and I found nothing for the longest time since I entered the mansion I felt"
                                         "  a presence of someone following  me every where or was it my imagination"
@@ -627,10 +629,11 @@ Reading_The_Book = Room("Reading Book", "Hello  this is the first day in the man
                                         " and I fell down the stairs.Now I was inside the stairs and couldn't get out "
                                         " even though I tried everything.The third day went by and I was still in the"
                                         " mansion and while being stuck in the stairs it made me realize of something"
-                                        " similar I captured in my dream when I was in a cave and suddenly....The book"
+                                        " similar I captured in my dream when I was in a cave and suddenly...The book"
                                         " seems to stop right here and on every page after that it says HELP!!!, This"
                                         " did not give you any information of how to get out however if the person who "
-                                        " wrote this is not here their must be a way to get out of here. ")
+                                        " wrote this is, is not here their must be a way to get out of here."
+                                        "To close the book go north ")
 
 east_stairs = Room("East stairs", "Wow you pick the stairs with the doll on top of one steps of the stairs ")
 
@@ -648,12 +651,13 @@ up_stairs_west = Room("upstairs west", "You are at the door with the key inside 
 up_stairs_south = Room("upstairs south", "You are at the piano with the key mold maybe you have to use a key in"
                                          " the piano and something might happen.")
 
-ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from"
-                                              " the gate door a mile away."
-                                              " This mansion who no one know's who built it or who live here and some"
-                                              " people have even said that the mansion has been abandoned for centuries"
-                                              " and it has stayed the same. THe mansion has 15 rooms or does it?"
-                                              " It also has a random statue with no head")
+ABANDONED_MANSION = Room("Abandoned Mansion", "What your looking at is an abandoned mansion from\n"
+                                              "the gate door a mile away.\n\n"
+                                              "\tThis mansion who no one know's who built it or who live here and some\n"
+                                              "people have even said that the mansion has been abandoned for centuries"
+                                              "\n"
+                                              "and it has stayed the same. THe mansion has 15 rooms or does it?\n"
+                                              "It also has a random statue with no head")
 
 #  you open the door with the key,get in.
 # =======================================Instantiate items==============================================================
@@ -720,6 +724,8 @@ West_inside_west_stairs.south = South_inside_west_stairs
 South_inside_west_stairs.north = North_inside_west_stairs
 South_inside_west_stairs.east = East_inside_west_stairs
 South_inside_west_stairs.west = West_inside_west_stairs
+South_inside_west_stairs.south = Reading_The_Book
+Reading_The_Book.north = South_inside_west_stairs
 Up_stairs.east = east_stairs
 east_stairs.west = Up_stairs
 east_stairs.south = up_east_stairs
