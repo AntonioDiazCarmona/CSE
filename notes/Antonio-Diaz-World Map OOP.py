@@ -11,6 +11,10 @@ class LockException(Exception):
     pass
 
 
+class NeedKeyException(Exception):
+    pass
+
+
 class ToHigh(Exception):
     pass
 
@@ -516,6 +520,7 @@ c1 = Character("Orc1", 100, Long_Axe, None)
 c2 = Character("Orc2", 100, Long_Bow, None)
 stool = Stool("stool", 10, 100)
 key = Keys("key", 1, 1000)
+SecondKey = Keys("SecondKey", 1, 1000)
 flashlight = Flashlight("FlashLight", 1, 50)
 # ================================================Rooms=================================================================
 MANSION_DOOR = Room("The Abandoned Mansion Door", "The door seems to be closed and around you can see plants.\n"
@@ -653,9 +658,10 @@ up_east_stairs = Room("Up East Stairs", "You went up the east stairs to the east
                       "To the south its just blocked off by a random piano that looks very clean and looks like\n"
                                         "it has a key mold.\n")
 
-up_stairs_east = Room("upstairs east", "You are at the east room with the broken door.Their is not much here just\n"
-                                       "a flashlight and footprints in the ground and randomly disappear when they\n"
-                                       "got close to the wall to go inside the room go east")                   # ADDDDDDDDDDDDDDDDDD a path here
+up_stairs_east = Room("upstairs east", "You are outside the east room with the broken door.Their seems to be not much\n"
+                                       " inside just a flashlight and footprints in the ground and randomly\n"
+                                       " disappear when they got close to the wall to go inside the room go east\n")
+#  ADDDDDDDDDDDDDDDDDD a path here
 Up_stairs_east_room = Room("Inside upstairs east room", "Your are now inside the east room you see the footprints\n"
                                                         "close and you realize that the closer they get to the wall\n"
                            "the smaller the footprints get like if a grown up  was getting\n"
@@ -663,9 +669,8 @@ Up_stairs_east_room = Room("Inside upstairs east room", "Your are now inside the
                                                         "probably take the flashlight", None, None, None, None, None,
                            None, flashlight)
 
-
-up_stairs_west = Room("upstairs west", "You are at the door, with the key inside the door.")
-
+up_stairs_west = Room("upstairs west", "You are at the door, with the key inside the door.", None, None, None, None,
+                      None, None, SecondKey)
 up_stairs_south = Room("upstairs south", "You are at the piano with the key mold maybe you have to use a key in\n"
                                          "the piano and something might happen.")
 
@@ -778,6 +783,7 @@ while playing:
         command = directions[pos]
     if command.lower() in ['q', 'quit', 'exit']:
         playing = False
+
     elif command == 'BackPack':
         print("You have these items in your inventory:")
         for item in player.inventory:
@@ -825,6 +831,10 @@ while playing:
             if player.current_location == MANSION_DOOR and command.lower() in ["south", 's']:
                 if key not in player.inventory:
                     raise LockException
+            if player.current_location == up_stairs_south and command.lower() in ['place key in piano',
+                                                                                  'put key in piano']:
+                if SecondKey not in player.inventory:
+                    raise NeedKeyException
 
             if room_object_that_we_move_to is None:
                 raise AttributeError
@@ -835,6 +845,8 @@ while playing:
             print(colored("I can't go that way.", 'red'))
         except LockException:
             print(colored("It's locked.", 'green'))
+        except NeedKeyException:
+            print(colored("You need a key to put inside the piano so something happens", 'green'))
     else:
         print(colored("Command Not Recognized", 'red'))
     print()
